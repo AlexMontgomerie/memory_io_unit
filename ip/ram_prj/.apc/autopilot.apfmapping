@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ram.cpp" path="/home/juju/mem_test_rw_seperate/ip/ram.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="ram_test.cpp" path="/home/juju/mem_test_rw_seperate/ip/ram_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,1231 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May 22 15:53:47 2018
+# Process ID: 11743
+# Current directory: /home/juju/mem_test_rw_seperate/ip
+# Command line: vivado
+# Log file: /home/juju/mem_test_rw_seperate/ip/vivado.log
+# Journal file: /home/juju/mem_test_rw_seperate/ip/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_tools/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:12 . Memory (MB): peak = 6284.559 ; gain = 209.668 ; free physical = 6125 ; free virtual = 27320
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:hls:mem_hw:1.0 - mem_hw_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Successfully read diagram <design_1> from BD file </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd>
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue May 22 15:55:59 2018] Launched synth_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Tue May 22 15:55:59 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_nets axi_dma_0_mm2s_introut] [get_bd_nets axi_dma_0_s2mm_introut] [get_bd_intf_nets axi_interconnect_1_M01_AXI] [get_bd_cells axi_dma_0]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_nets axi_dma_0_mm2s_introut] [get_bd_nets axi_dma_0_s2mm_introut] [get_bd_intf_nets axi_interconnect_1_M01_AXI] [get_bd_cells axi_dma_0]'
+reset_run synth_1
+regenerate_bd_layout
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR]'
+delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0'
+INFO: [Common 17-17] undo 'startgroup'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit}] [get_bd_cells processing_system7_0]
+endgroup
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+validate_bd_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 6764.137 ; gain = 236.223 ; free physical = 5291 ; free virtual = 26488
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_0 .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us_df .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7e3921e835a209fe; cache size = 184.828 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 005be4fe2f0dd8d7; cache size = 184.828 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d0450fe8a6b42035; cache size = 184.828 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_1, cache-ID = b98bc11e043ec5c6; cache size = 184.828 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_0, cache-ID = 06227d44ccf3abd1; cache size = 184.828 MB.
+[Tue May 22 16:14:59 2018] Launched design_1_processing_system7_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_processing_system7_0_0_synth_1/runme.log
+synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Tue May 22 16:14:59 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 6918.402 ; gain = 118.219 ; free physical = 5121 ; free virtual = 26361
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 832 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper_board.xdc]
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper_early.xdc]
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper.xdc]
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper_late.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-11743-alex-HP-Compaq-Elite-8300-CMT/dcp30/design_1_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 7655.957 ; gain = 11.672 ; free physical = 3831 ; free virtual = 25168
+Restored from archive | CPU: 1.120000 secs | Memory: 19.041389 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 7655.957 ; gain = 11.672 ; free physical = 3831 ; free virtual = 25168
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 375 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 308 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 54 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+  SRLC32E => SRL16E: 4 instances
+
+open_run: Time (s): cpu = 00:00:39 ; elapsed = 00:00:37 . Memory (MB): peak = 7861.141 ; gain = 927.793 ; free physical = 3758 ; free virtual = 25060
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {32 Bit}] [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {32 Bit}] [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_mm2s_burst_size {16} CONFIG.c_s2mm_burst_size {16}] [get_bd_cells axi_dma_0]
+endgroup
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 7991.199 ; gain = 5.008 ; free physical = 607 ; free virtual = 22440
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_0 .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us_df .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_processing_system7_0_0, cache-ID = 27d0c15d729def67; cache size = 185.597 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7e3921e835a209fe; cache size = 185.597 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 005be4fe2f0dd8d7; cache size = 185.597 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d0450fe8a6b42035; cache size = 185.597 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_1, cache-ID = b98bc11e043ec5c6; cache size = 185.597 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_0, cache-ID = 06227d44ccf3abd1; cache size = 185.597 MB.
+[Wed May 23 16:06:53 2018] Launched design_1_axi_dma_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_dma_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_axi_dma_0_0_synth_1/runme.log
+synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Wed May 23 16:06:53 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 8062.004 ; gain = 33.781 ; free physical = 474 ; free virtual = 22322
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells xlconcat_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins xlconcat_0/In3]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {3}] [get_bd_cells axi_interconnect_1]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M02_AXI] [get_bd_intf_pins axi_timer_0/S_AXI]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M02_ACLK]
+INFO: [BD 5-456] Automation on '/axi_timer_0/s_axi_aclk' will not be run, since it is obsolete due to previously run automations
+endgroup
+assign_bd_address
+</axi_timer_0/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42800000 [ 64K ]>
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 8112.027 ; gain = 0.000 ; free physical = 1095 ; free virtual = 21180
+startgroup
+set_property -dict [list CONFIG.enable_timer2 {0}] [get_bd_cells axi_timer_0]
+endgroup
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 8128.035 ; gain = 0.000 ; free physical = 1094 ; free virtual = 21179
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_0 .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us_df .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xlconcat_0_0, cache-ID = 1809ea025da321a8; cache size = 190.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xbar_2, cache-ID = 8a90b897b2e7936b; cache size = 190.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7e3921e835a209fe; cache size = 190.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 005be4fe2f0dd8d7; cache size = 190.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d0450fe8a6b42035; cache size = 190.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_1, cache-ID = b98bc11e043ec5c6; cache size = 190.962 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_0, cache-ID = 06227d44ccf3abd1; cache size = 190.962 MB.
+[Wed May 23 17:01:56 2018] Launched design_1_processing_system7_0_0_synth_1, design_1_axi_timer_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_axi_timer_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_axi_timer_0_0_synth_1/runme.log
+synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Wed May 23 17:01:56 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 8212.098 ; gain = 52.047 ; free physical = 975 ; free virtual = 21073
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.dcp' for cell 'design_1_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.dcp' for cell 'design_1_i/axi_timer_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_mem_hw_0_0/design_1_mem_hw_0_0.dcp' for cell 'design_1_i/mem_hw_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/design_1_system_ila_0_1.dcp' for cell 'design_1_i/system_ila_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.dcp' for cell 'design_1_i/xlconcat_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp' for cell 'design_1_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.dcp' for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0.dcp' for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us_df'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1.dcp' for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us_df'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.dcp' for cell 'design_1_i/axi_interconnect_1/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/axi_interconnect_1/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 850 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: design_1_i/system_ila_0/inst/ila_lib UUID: cd4c83c8-23a6-596d-99ad-09be1335c6b0 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'design_1_i/axi_timer_0/U0'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc] for cell 'design_1_i/axi_timer_0/U0'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0.dcp'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1_clocks.xdc] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us_df/inst'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1_clocks.xdc] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us_df/inst'
+Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0_clocks.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us_df/inst'
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0_clocks.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us_df/inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.first_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.first_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.first_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.first_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.gen_axi3_conv.axi3_conv_inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.gen_axi3_conv.axi3_conv_inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.gen_axi3_conv.axi3_conv_inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.gen_axi3_conv.axi3_conv_inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.gen_axi3_conv.axi3_conv_inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.gen_axi3_conv.axi3_conv_inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.first_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_ds/inst/gen_downsizer.gen_cascaded_downsizer.first_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Finished Sourcing Tcl File [/opt/Xilinx_tools/Vivado/2017.4/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 365 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 308 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 48 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+
+open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 8648.680 ; gain = 421.633 ; free physical = 1510 ; free virtual = 20913
+report_power -name {power_1}
+Command: report_power -name power_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+1 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 8795.750 ; gain = 147.070 ; free physical = 1430 ; free virtual = 20822
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.0 mig_7series_0
+endgroup
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+delete_bd_objs [get_bd_cells mig_7series_0]
+startgroup
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 8814.773 ; gain = 0.000 ; free physical = 2275 ; free virtual = 22509
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_0 .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_1/design_1_auto_us_df_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_us_df_0/design_1_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us_df .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7e3921e835a209fe; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = 005be4fe2f0dd8d7; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = d0450fe8a6b42035; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_1, cache-ID = b98bc11e043ec5c6; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_df_0, cache-ID = 06227d44ccf3abd1; cache size = 192.530 MB.
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu May 24 13:43:59 2018] Launched synth_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Thu May 24 13:43:59 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 8923.266 ; gain = 74.477 ; free physical = 2945 ; free virtual = 23162
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP1 {1} CONFIG.PCW_USE_S_AXI_HP2 {1} CONFIG.PCW_USE_S_AXI_HP3 {1} CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {64}] [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+delete_bd_objs [get_bd_intf_nets axi_interconnect_0_M00_AXI] [get_bd_cells system_ila_0]
+startgroup
+set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_0]
+delete_bd_objs [get_bd_intf_nets axi_interconnect_0_M01_AXI]
+endgroup
+startgroup
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+copy_bd_objs /  [get_bd_cells {axi_dma_0}]
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_1/M_AXIS_MM2S. Setting parameter on /axi_dma_1/M_AXIS_MM2S failed
+copy_bd_objs /  [get_bd_cells {axi_dma_0}]
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_2/M_AXIS_MM2S. Setting parameter on /axi_dma_2/M_AXIS_MM2S failed
+copy_bd_objs /  [get_bd_cells {axi_dma_0}]
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_3/M_AXIS_MM2S. Setting parameter on /axi_dma_3/M_AXIS_MM2S failed
+set_property location {6 2037 361} [get_bd_cells axi_dma_1]
+set_property location {5 2169 615} [get_bd_cells axi_dma_2]
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd}
+set_property location {5 2071 878} [get_bd_cells axi_dma_3]
+set_property location {3.5 1497 130} [get_bd_cells mem_hw_0]
+copy_bd_objs /  [get_bd_cells {mem_hw_0}]
+copy_bd_objs /  [get_bd_cells {mem_hw_0}]
+copy_bd_objs /  [get_bd_cells {mem_hw_0}]
+set_property location {4 1519 366} [get_bd_cells mem_hw_1]
+set_property location {4 1463 936} [get_bd_cells mem_hw_3]
+set_property location {4 1489 624} [get_bd_cells mem_hw_2]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_2/out_r] [get_bd_intf_pins axi_dma_2/S_AXIS_S2MM]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_3/out_r] [get_bd_intf_pins axi_dma_3/S_AXIS_S2MM]
+set_property location {4 1497 900} [get_bd_cells mem_hw_3]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_1/out_r] [get_bd_intf_pins axi_dma_1/S_AXIS_S2MM]
+copy_bd_objs /  [get_bd_cells {axi_interconnect_1}]
+set_property location {2 471 566} [get_bd_cells axi_interconnect_2]
+set_property location {3 945 380} [get_bd_cells axi_timer_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXIS_MM2S] [get_bd_intf_pins mem_hw_1/in_r]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_2/M_AXIS_MM2S] [get_bd_intf_pins mem_hw_2/in_r]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_3/M_AXIS_MM2S] [get_bd_intf_pins mem_hw_3/in_r]
+set_property location {6 2511 1200} [get_bd_cells xlconcat_0]
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_interconnect_0}]
+set_property location {6 2478 611} [get_bd_cells axi_interconnect_3]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_interconnect_3}]
+set_property location {6 2520 890} [get_bd_cells axi_interconnect_4]
+endgroup
+set_property location {6 2522 488} [get_bd_cells axi_interconnect_3]
+set_property location {6 2510 769} [get_bd_cells axi_interconnect_4]
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_interconnect_4}]
+set_property location {6 2491 1007} [get_bd_cells axi_interconnect_5]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_3/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP1]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_4/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP2]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_5/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP3]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_interconnect_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_interconnect_3/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_2/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_interconnect_4/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_2/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_interconnect_4/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_3/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_interconnect_5/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_3/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_interconnect_5/S01_AXI]
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_interconnect_2}]
+set_property location {2 583 960} [get_bd_cells axi_interconnect_6]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_interconnect_6}]
+set_property location {2 559 1404} [get_bd_cells axi_interconnect_7]
+endgroup
+set_property location {3 967 1714} [get_bd_cells axi_timer_0]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_1/s_axi_CONTROL_BUS] -boundary_type upper [get_bd_intf_pins axi_interconnect_2/M00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_2/M01_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_2/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_6/M01_AXI]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_2/s_axi_CONTROL_BUS] -boundary_type upper [get_bd_intf_pins axi_interconnect_6/M00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_3/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_7/M01_AXI]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_3/s_axi_CONTROL_BUS] -boundary_type upper [get_bd_intf_pins axi_interconnect_7/M00_AXI]
+regenerate_bd_layout
+regenerate_bd_layout
+set_property location {5 1823 -131} [get_bd_cells axi_interconnect_0]
+set_property location {4 1286 -150} [get_bd_cells axi_dma_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins processing_system7_0/S_AXI_HP1_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins processing_system7_0/S_AXI_HP2_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins processing_system7_0/S_AXI_HP3_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_1/s_axi_lite_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_1/m_axi_mm2s_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_1/m_axi_s2mm_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_2/s_axi_lite_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_2/m_axi_mm2s_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_2/m_axi_s2mm_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_3/s_axi_lite_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_3/m_axi_mm2s_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_dma_3/m_axi_s2mm_aclk]
+INFO: [BD 5-456] Automation on '/mem_hw_1/ap_clk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/mem_hw_2/ap_clk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/mem_hw_3/ap_clk' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_2/ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_2/M00_ACLK]
+INFO: [BD 5-456] Automation on '/axi_interconnect_2/M01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_3/ACLK]
+INFO: [BD 5-456] Automation on '/axi_interconnect_3/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/axi_interconnect_3/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/axi_interconnect_3/S01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_4/ACLK]
+INFO: [BD 5-456] Automation on '/axi_interconnect_4/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/axi_interconnect_4/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/axi_interconnect_4/S01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_5/ACLK]
+INFO: [BD 5-456] Automation on '/axi_interconnect_5/S00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/axi_interconnect_5/M00_ACLK' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-456] Automation on '/axi_interconnect_5/S01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_6/ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_6/M00_ACLK]
+INFO: [BD 5-456] Automation on '/axi_interconnect_6/M01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_7/ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_7/M00_ACLK]
+INFO: [BD 5-456] Automation on '/axi_interconnect_7/M01_ACLK' will not be run, since it is obsolete due to previously run automations
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets mem_hw_0_out_r] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 2 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rst_ps7_0_100M/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /mem_hw_0_out_r, to System ILA slot interface pin /system_ila_0/SLOT_0_AXIS for debug.
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXIS_MM2S, to System ILA slot interface pin /system_ila_0/SLOT_1_AXIS for debug.
+endgroup
+delete_bd_objs [get_bd_cells system_ila_0]
+set_property location {3 938 -101} [get_bd_cells mem_hw_0]
+set_property location {2 651 -100} [get_bd_cells axi_interconnect_1]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {13}] [get_bd_cells xlconcat_0]
+endgroup
+delete_bd_objs [get_bd_nets axi_timer_0_interrupt]
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins xlconcat_0/In12]
+connect_bd_net [get_bd_pins xlconcat_0/In3] [get_bd_pins mem_hw_1/interrupt]
+connect_bd_net [get_bd_pins xlconcat_0/In4] [get_bd_pins axi_dma_1/mm2s_introut]
+connect_bd_net [get_bd_pins xlconcat_0/In5] [get_bd_pins axi_dma_1/s2mm_introut]
+connect_bd_net [get_bd_pins xlconcat_0/In6] [get_bd_pins mem_hw_2/interrupt]
+connect_bd_net [get_bd_pins xlconcat_0/In7] [get_bd_pins axi_dma_2/mm2s_introut]
+connect_bd_net [get_bd_pins xlconcat_0/In8] [get_bd_pins axi_dma_2/s2mm_introut]
+connect_bd_net [get_bd_pins xlconcat_0/In9] [get_bd_pins mem_hw_3/interrupt]
+connect_bd_net [get_bd_pins xlconcat_0/In10] [get_bd_pins axi_dma_3/mm2s_introut]
+connect_bd_net [get_bd_pins xlconcat_0/In11] [get_bd_pins axi_dma_3/s2mm_introut]
+regenerate_bd_layout
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets mem_hw_0_out_r] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 2 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rst_ps7_0_100M/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /mem_hw_0_out_r, to System ILA slot interface pin /system_ila_0/SLOT_0_AXIS for debug.
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXIS_MM2S, to System ILA slot interface pin /system_ila_0/SLOT_1_AXIS for debug.
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {2}] [get_bd_cells axi_interconnect_6]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {2}] [get_bd_cells axi_interconnect_7]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {3}] [get_bd_cells axi_interconnect_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {2} CONFIG.NUM_MI {2}] [get_bd_cells axi_interconnect_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {9}] [get_bd_cells axi_interconnect_1]
+endgroup
+delete_bd_objs [get_bd_intf_nets axi_interconnect_7_M00_AXI] [get_bd_intf_nets axi_interconnect_7_M01_AXI] [get_bd_cells axi_interconnect_7]
+delete_bd_objs [get_bd_intf_nets axi_interconnect_6_M00_AXI] [get_bd_intf_nets axi_interconnect_6_M01_AXI] [get_bd_cells axi_interconnect_6]
+delete_bd_objs [get_bd_intf_nets axi_interconnect_2_M00_AXI] [get_bd_intf_nets axi_interconnect_2_M01_AXI] [get_bd_cells axi_interconnect_2]
+delete_bd_objs [get_bd_intf_nets axi_interconnect_1_M02_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M02_AXI] [get_bd_intf_pins mem_hw_1/s_axi_CONTROL_BUS]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M03_AXI]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_2/s_axi_CONTROL_BUS] -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M04_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_2/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M05_AXI]
+connect_bd_intf_net [get_bd_intf_pins mem_hw_3/s_axi_CONTROL_BUS] -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M06_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_3/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M07_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_timer_0/S_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_1/M08_AXI]
+regenerate_bd_layout
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M03_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M04_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M05_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M06_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M07_ACLK]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_pins axi_interconnect_1/M08_ACLK]
+endgroup
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /home/juju/mem_test_rw_seperate/ip/mem_prj/solution1/impl/ip/component.xml. It will be created.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: /home/juju/mem_test_rw_seperate/ip/mem_prj/solution1/impl/ip/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 9466.062 ; gain = 4.266 ; free physical = 837 ; free virtual = 18866
+report_ip_status -name ip_status
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_mem_hw_0_0 design_1_mem_hw_0_1 design_1_mem_hw_0_3 design_1_mem_hw_0_2}] -log ip_upgrade.log
+Upgrading '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_0 (Mem_hw 1.0) from revision 1805211644 to revision 1805251152
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_mem_hw_0_0'. These changes may impact your design.
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_1 (Mem_hw 1.0) from revision 1805211644 to revision 1805251152
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_mem_hw_0_1'. These changes may impact your design.
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_2 (Mem_hw 1.0) from revision 1805211644 to revision 1805251152
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_mem_hw_0_2'. These changes may impact your design.
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_3 (Mem_hw 1.0) from revision 1805211644 to revision 1805251152
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'in_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TDATA' width 64 differs from original width 32
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TKEEP' width 8 differs from original width 4
+WARNING: [IP_Flow 19-4706] Upgraded port 'out_r_TSTRB' width 8 differs from original width 4
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_mem_hw_0_3'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_mem_hw_0_0' has identified issues that may require user intervention. Please review the upgrade log '/home/juju/mem_test_rw_seperate/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_mem_hw_0_1' has identified issues that may require user intervention. Please review the upgrade log '/home/juju/mem_test_rw_seperate/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_mem_hw_0_2' has identified issues that may require user intervention. Please review the upgrade log '/home/juju/mem_test_rw_seperate/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'design_1_mem_hw_0_3' has identified issues that may require user intervention. Please review the upgrade log '/home/juju/mem_test_rw_seperate/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/juju/mem_test_rw_seperate/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 9501.688 ; gain = 0.004 ; free physical = 409 ; free virtual = 18780
+export_ip_user_files -of_objects [get_ips {design_1_mem_hw_0_0 design_1_mem_hw_0_1 design_1_mem_hw_0_3 design_1_mem_hw_0_2}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_dma_2]
+set_property -dict [list CONFIG.c_include_mm2s {1} CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_include_mm2s_dre {1} CONFIG.c_mm2s_burst_size {16} CONFIG.c_include_s2mm {1} CONFIG.c_include_s2mm_dre {1}] [get_bd_cells axi_dma_2]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_dma_3]
+set_property -dict [list CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {8}] [get_bd_cells axi_dma_3]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {8}] [get_bd_cells axi_dma_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {8}] [get_bd_cells axi_dma_1]
+endgroup
+startgroup
+endgroup
+startgroup
+endgroup
+assign_bd_address
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </axi_dma_0/Data_MM2S> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </axi_dma_0/Data_S2MM> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM> is being mapped into </axi_dma_1/Data_MM2S> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM> is being mapped into </axi_dma_1/Data_S2MM> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </axi_dma_2/Data_MM2S> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </axi_dma_2/Data_S2MM> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM> is being mapped into </axi_dma_3/Data_MM2S> at <0x00000000 [ 1G ]>
+</processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM> is being mapped into </axi_dma_3/Data_S2MM> at <0x00000000 [ 1G ]>
+</axi_dma_1/S_AXI_LITE/Reg> is being mapped into </processing_system7_0/Data> at <0x40410000 [ 64K ]>
+</axi_dma_2/S_AXI_LITE/Reg> is being mapped into </processing_system7_0/Data> at <0x40420000 [ 64K ]>
+</axi_dma_3/S_AXI_LITE/Reg> is being mapped into </processing_system7_0/Data> at <0x40430000 [ 64K ]>
+</mem_hw_1/s_axi_CONTROL_BUS/Reg> is being mapped into </processing_system7_0/Data> at <0x43C10000 [ 64K ]>
+</mem_hw_2/s_axi_CONTROL_BUS/Reg> is being mapped into </processing_system7_0/Data> at <0x43C20000 [ 64K ]>
+</mem_hw_3/s_axi_CONTROL_BUS/Reg> is being mapped into </processing_system7_0/Data> at <0x43C30000 [ 64K ]>
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 9606.730 ; gain = 0.004 ; free physical = 299 ; free virtual = 18711
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_cells system_ila_0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_interconnect_0_M00_AXI }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_interconnect_3_M00_AXI }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_interconnect_4_M00_AXI }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_interconnect_5_M00_AXI }]
+true
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets axi_interconnect_5_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 1 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rst_ps7_0_100M/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /axi_interconnect_5_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_0_AXI for debug.
+delete_bd_objs [get_bd_cells system_ila_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets mem_hw_0_out_r] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_interconnect_0_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_interconnect_3_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_interconnect_4_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_interconnect_5_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 6 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rst_ps7_0_100M/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /mem_hw_0_out_r, to System ILA slot interface pin /system_ila_0/SLOT_0_AXIS for debug.
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXIS_MM2S, to System ILA slot interface pin /system_ila_0/SLOT_1_AXIS for debug.
+Debug Automation : Connecting interface connection /axi_interconnect_0_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_2_AXI for debug.
+Debug Automation : Connecting interface connection /axi_interconnect_3_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_3_AXI for debug.
+Debug Automation : Connecting interface connection /axi_interconnect_4_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_4_AXI for debug.
+Debug Automation : Connecting interface connection /axi_interconnect_5_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_5_AXI for debug.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { mem_hw_0_out_r } ]
+disconnect_bd_intf_net [get_bd_intf_net mem_hw_0_out_r] [get_bd_intf_pins system_ila_0/SLOT_0_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { axi_dma_0_M_AXIS_MM2S } ]
+disconnect_bd_intf_net [get_bd_intf_net axi_dma_0_M_AXIS_MM2S] [get_bd_intf_pins system_ila_0/SLOT_0_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 9747.715 ; gain = 0.992 ; free physical = 223 ; free virtual = 18641
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_xbar_1_synth_1
+reset_run design_1_axi_dma_0_0_synth_1
+reset_run design_1_processing_system7_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_interconnect_0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_bid'(1) to net 'axi_interconnect_0_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_rid'(1) to net 'axi_interconnect_0_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_AWID'(6) to net 'axi_interconnect_3_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_bid'(1) to net 'axi_interconnect_3_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_WID'(6) to net 'axi_interconnect_3_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_rid'(1) to net 'axi_interconnect_3_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_ARID'(6) to net 'axi_interconnect_3_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to net 'axi_interconnect_4_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_bid'(1) to net 'axi_interconnect_4_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to net 'axi_interconnect_4_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_rid'(1) to net 'axi_interconnect_4_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to net 'axi_interconnect_4_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_AWID'(6) to net 'axi_interconnect_5_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_bid'(1) to net 'axi_interconnect_5_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_WID'(6) to net 'axi_interconnect_5_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_rid'(1) to net 'axi_interconnect_5_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_ARID'(6) to net 'axi_interconnect_5_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_interconnect_0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_bid'(1) to net 'axi_interconnect_0_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_rid'(1) to net 'axi_interconnect_0_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_AWID'(6) to net 'axi_interconnect_3_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_bid'(1) to net 'axi_interconnect_3_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_WID'(6) to net 'axi_interconnect_3_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_rid'(1) to net 'axi_interconnect_3_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_ARID'(6) to net 'axi_interconnect_3_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to net 'axi_interconnect_4_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_bid'(1) to net 'axi_interconnect_4_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to net 'axi_interconnect_4_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_rid'(1) to net 'axi_interconnect_4_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to net 'axi_interconnect_4_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_AWID'(6) to net 'axi_interconnect_5_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_bid'(1) to net 'axi_interconnect_5_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_WID'(6) to net 'axi_interconnect_5_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_rid'(1) to net 'axi_interconnect_5_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_ARID'(6) to net 'axi_interconnect_5_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/xbar .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_4/bd_0/hw_handoff/design_1_system_ila_0_4.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_4/bd_0/hw_handoff/design_1_system_ila_0_4_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_4/bd_0/synth/design_1_system_ila_0_4.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_3/design_1_s01_data_fifo_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_3/design_1_s00_data_fifo_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_2/design_1_s01_data_fifo_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_2/design_1_s00_data_fifo_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_1/design_1_s01_data_fifo_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_1/design_1_s00_data_fifo_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_0/design_1_s01_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_0/design_1_s00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/s00_data_fifo .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_4, cache-ID = 39afa56a2c730f0b; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_3, cache-ID = 147bdaffff085bf6; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_3, cache-ID = c45258b336029482; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_3, cache-ID = 39afa56a2c730f0b; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_2, cache-ID = 147bdaffff085bf6; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_2, cache-ID = c45258b336029482; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_2, cache-ID = 39afa56a2c730f0b; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_1, cache-ID = 147bdaffff085bf6; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_1, cache-ID = c45258b336029482; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7e3921e835a209fe; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 39afa56a2c730f0b; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_0, cache-ID = 147bdaffff085bf6; cache size = 192.530 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_0, cache-ID = c45258b336029482; cache size = 192.530 MB.
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri May 25 12:02:07 2018] Launched design_1_xbar_1_synth_1, design_1_axi_dma_0_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_mem_hw_0_3_synth_1, design_1_axi_dma_0_3_synth_1, design_1_xlconcat_0_0_synth_1, design_1_xbar_2_synth_1, design_1_mem_hw_0_0_synth_1, design_1_mem_hw_0_1_synth_1, design_1_axi_dma_0_2_synth_1, design_1_system_ila_0_4_synth_1, design_1_xbar_5_synth_1, design_1_axi_dma_0_1_synth_1, design_1_xbar_3_synth_1, design_1_xbar_4_synth_1, design_1_mem_hw_0_2_synth_1, synth_1...
+Run output will be captured here:
+design_1_xbar_1_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_xbar_1_synth_1/runme.log
+design_1_axi_dma_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_axi_dma_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_mem_hw_0_3_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_3_synth_1/runme.log
+design_1_axi_dma_0_3_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_axi_dma_0_3_synth_1/runme.log
+design_1_xlconcat_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_xlconcat_0_0_synth_1/runme.log
+design_1_xbar_2_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_xbar_2_synth_1/runme.log
+design_1_mem_hw_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_0_synth_1/runme.log
+design_1_mem_hw_0_1_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_1_synth_1/runme.log
+design_1_axi_dma_0_2_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_axi_dma_0_2_synth_1/runme.log
+design_1_system_ila_0_4_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_system_ila_0_4_synth_1/runme.log
+design_1_xbar_5_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_xbar_5_synth_1/runme.log
+design_1_axi_dma_0_1_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_axi_dma_0_1_synth_1/runme.log
+design_1_xbar_3_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_xbar_3_synth_1/runme.log
+design_1_xbar_4_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_xbar_4_synth_1/runme.log
+design_1_mem_hw_0_2_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_2_synth_1/runme.log
+synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Fri May 25 12:02:08 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:02 ; elapsed = 00:00:57 . Memory (MB): peak = 9883.996 ; gain = 71.203 ; free physical = 207 ; free virtual = 18559
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 9891.457 ; gain = 0.000 ; free physical = 1800 ; free virtual = 18838
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_mem_hw_0_0 design_1_mem_hw_0_1 design_1_mem_hw_0_3 design_1_mem_hw_0_2}] -log ip_upgrade.log
+Upgrading '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_0 (Mem_hw 1.0) from revision 1805251152 to revision 1805251415
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_1 (Mem_hw 1.0) from revision 1805251152 to revision 1805251415
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_2 (Mem_hw 1.0) from revision 1805251152 to revision 1805251415
+INFO: [IP_Flow 19-3422] Upgraded design_1_mem_hw_0_3 (Mem_hw 1.0) from revision 1805251152 to revision 1805251415
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/juju/mem_test_rw_seperate/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 9891.461 ; gain = 0.004 ; free physical = 1750 ; free virtual = 18794
+export_ip_user_files -of_objects [get_ips {design_1_mem_hw_0_0 design_1_mem_hw_0_1 design_1_mem_hw_0_3 design_1_mem_hw_0_2}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+validate_bd_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 9907.480 ; gain = 0.000 ; free physical = 1732 ; free virtual = 18796
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_interconnect_0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_bid'(1) to net 'axi_interconnect_0_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_rid'(1) to net 'axi_interconnect_0_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_AWID'(6) to net 'axi_interconnect_3_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_bid'(1) to net 'axi_interconnect_3_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_WID'(6) to net 'axi_interconnect_3_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_rid'(1) to net 'axi_interconnect_3_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_ARID'(6) to net 'axi_interconnect_3_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to net 'axi_interconnect_4_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_bid'(1) to net 'axi_interconnect_4_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to net 'axi_interconnect_4_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_rid'(1) to net 'axi_interconnect_4_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to net 'axi_interconnect_4_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_AWID'(6) to net 'axi_interconnect_5_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_bid'(1) to net 'axi_interconnect_5_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_WID'(6) to net 'axi_interconnect_5_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_rid'(1) to net 'axi_interconnect_5_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_ARID'(6) to net 'axi_interconnect_5_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_3/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_4/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_5/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_interconnect_0_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_bid'(1) to net 'axi_interconnect_0_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXI_rid'(1) to net 'axi_interconnect_0_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_AWID'(6) to net 'axi_interconnect_3_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_bid'(1) to net 'axi_interconnect_3_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_WID'(6) to net 'axi_interconnect_3_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXI_rid'(1) to net 'axi_interconnect_3_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP1_ARID'(6) to net 'axi_interconnect_3_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_AWID'(6) to net 'axi_interconnect_4_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_bid'(1) to net 'axi_interconnect_4_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_WID'(6) to net 'axi_interconnect_4_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXI_rid'(1) to net 'axi_interconnect_4_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP2_ARID'(6) to net 'axi_interconnect_4_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_AWID'(6) to net 'axi_interconnect_5_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_bid'(1) to net 'axi_interconnect_5_M00_AXI_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_WID'(6) to net 'axi_interconnect_5_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_rid'(1) to net 'axi_interconnect_5_M00_AXI_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP3_ARID'(6) to net 'axi_interconnect_5_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_hw_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/xbar .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_4/bd_0/hw_handoff/design_1_system_ila_0_4.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_4/bd_0/hw_handoff/design_1_system_ila_0_4_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_system_ila_0_4/bd_0/synth/design_1_system_ila_0_4.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_3/design_1_s01_data_fifo_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_3/design_1_s00_data_fifo_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_5/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_2/design_1_s01_data_fifo_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_2/design_1_s00_data_fifo_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_4/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_1/design_1_s01_data_fifo_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_1/design_1_s00_data_fifo_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_3/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s01_data_fifo_0/design_1_s01_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ip/design_1_s00_data_fifo_0/design_1_s00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/s00_data_fifo .
+Exporting to file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_4, cache-ID = 39afa56a2c730f0b; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_3, cache-ID = 147bdaffff085bf6; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_3, cache-ID = c45258b336029482; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_3, cache-ID = 39afa56a2c730f0b; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_2, cache-ID = 147bdaffff085bf6; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_2, cache-ID = c45258b336029482; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_2, cache-ID = 39afa56a2c730f0b; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_1, cache-ID = 147bdaffff085bf6; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_1, cache-ID = c45258b336029482; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_1, cache-ID = 7e3921e835a209fe; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 39afa56a2c730f0b; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s01_data_fifo_0, cache-ID = 147bdaffff085bf6; cache size = 240.107 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_s00_data_fifo_0, cache-ID = c45258b336029482; cache size = 240.107 MB.
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri May 25 14:19:00 2018] Launched design_1_mem_hw_0_3_synth_1, design_1_mem_hw_0_0_synth_1, design_1_mem_hw_0_1_synth_1, design_1_mem_hw_0_2_synth_1, synth_1...
+Run output will be captured here:
+design_1_mem_hw_0_3_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_3_synth_1/runme.log
+design_1_mem_hw_0_0_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_0_synth_1/runme.log
+design_1_mem_hw_0_1_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_1_synth_1/runme.log
+design_1_mem_hw_0_2_synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/design_1_mem_hw_0_2_synth_1/runme.log
+synth_1: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/synth_1/runme.log
+[Fri May 25 14:19:00 2018] Launched impl_1...
+Run output will be captured here: /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 10002.809 ; gain = 63.312 ; free physical = 1643 ; free virtual = 18713
+report_ip_status -name ip_status 
+set_property location {3 1042 1184} [get_bd_cells axi_timer_0]
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/juju/mem_test_rw_seperate/mem_test_rw_seperate.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May 25 14:33:43 2018...

@@ -1,0 +1,150 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_proc'
+================================================================
+* Date:           Mon Jun  4 11:41:29 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        mem_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+--------+----------+------------+
+    |  Clock | Target | Estimated| Uncertainty|
+    +--------+--------+----------+------------+
+    |ap_clk  |  800.00|      8.00|      100.00|
+    +--------+--------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+---------+-----+---------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    | min |   max   | min |   max   |   Type  |
+    +-----+---------+-----+---------+---------+
+    |    2|  1048325|    2|  1048325|   none  |
+    +-----+---------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!tmp_8)
+	3  / (tmp_8)
+2 --> 
+	4  / true
+3 --> 
+	4  / true
+4 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.77ns
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecMemCore([256 x i64]* %test_init_arr_V, [1 x i8]* @p_str3, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str3, i32 -1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %in_V_dest_V, i1* %in_V_id_V, i1* %in_V_last_V, i1* %in_V_user_V, i8* %in_V_strb_V, i8* %in_V_keep_V, i64* %in_V_data_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %out_V_dest_V, i1* %out_V_id_V, i1* %out_V_last_V, i1* %out_V_user_V, i8* %out_V_strb_V, i8* %out_V_keep_V, i64* %out_V_data_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mask_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %mask)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%rw_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %rw)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %rw_read to i2" [mem.cpp:60]
+ST_1 : Operation 11 [1/1] (0.95ns)   --->   "%tmp_8 = icmp eq i2 %tmp, 0" [mem.cpp:60]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %0, label %1" [mem.cpp:60]
+ST_1 : Operation 13 [2/2] (1.76ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:63]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i64 %mask_read to i32" [mem.cpp:64]
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "call fastcc void @mem_write(i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %tmp_2, [256 x i64]* %test_init_arr_V)" [mem.cpp:64]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i32 %rw_read to i1" [mem.cpp:66]
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %2, label %._crit_edge" [mem.cpp:66]
+ST_1 : Operation 18 [2/2] (1.76ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:67]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 0.00ns
+ST_2 : Operation 19 [1/2] (0.00ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:63]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 20 [1/2] (0.00ns)   --->   "call fastcc void @mem_write(i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %tmp_2, [256 x i64]* %test_init_arr_V)" [mem.cpp:64]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br label %.ret.exitStub" [mem.cpp:65]
+
+ <State 3> : 0.00ns
+ST_3 : Operation 22 [1/2] (0.00ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:67]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "br label %._crit_edge" [mem.cpp:67]
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br label %.ret.exitStub"
+
+ <State 4> : 0.00ns
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "ret void"
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 800ns, clock uncertainty: 100ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	'call' operation (mem.cpp:63) to 'mem_read' [27]  (1.77 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

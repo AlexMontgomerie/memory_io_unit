@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri May 25 14:35:17 2018
+# Process ID: 30646
+# Current directory: /home/juju/mem_test_rw_seperate/ip
+# Command line: vivado
+# Log file: /home/juju/mem_test_rw_seperate/ip/vivado.log
+# Journal file: /home/juju/mem_test_rw_seperate/ip/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/vivado_test/stream_test_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/juju/mem_test_rw_seperate/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_tools/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:22 . Memory (MB): peak = 6363.473 ; gain = 278.508 ; free physical = 4598 ; free virtual = 21575
+update_compile_order -fileset sources_1
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.hdf
+
+file copy -force /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.runs/impl_1/design_1_wrapper.sysdef /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2502 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper_board.xdc]
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper_early.xdc]
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper.xdc]
+Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper_late.xdc]
+Finished Parsing XDC File [/home/juju/mem_test_rw_seperate/ip/.Xil/Vivado-30646-alex-HP-Compaq-Elite-8300-CMT/dcp0/design_1_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7423.320 ; gain = 34.070 ; free physical = 3074 ; free virtual = 20451
+Restored from archive | CPU: 3.100000 secs | Memory: 51.779106 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7423.320 ; gain = 34.070 ; free physical = 3074 ; free virtual = 20451
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 958 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 832 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 110 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 4 instances
+  SRLC32E => SRL16E: 12 instances
+
+open_run: Time (s): cpu = 00:01:07 ; elapsed = 00:01:19 . Memory (MB): peak = 7659.098 ; gain = 1258.562 ; free physical = 3019 ; free virtual = 20315
+open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 7669.852 ; gain = 0.000 ; free physical = 2829 ; free virtual = 20170
+launch_sdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk -hwspec /home/juju/mem_test_rw_seperate/mem_test_rw_seperate.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May 25 15:09:21 2018...

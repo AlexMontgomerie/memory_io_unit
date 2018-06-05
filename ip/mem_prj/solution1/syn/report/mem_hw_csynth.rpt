@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vivado HLS Report for 'mem_hw'
+================================================================
+* Date:           Mon Jun  4 11:41:30 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        mem_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+--------+----------+------------+
+    |  Clock | Target | Estimated| Uncertainty|
+    +--------+--------+----------+------------+
+    |ap_clk  |  800.00|      8.00|      100.00|
+    +--------+--------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+---------+-----+---------+----------+
+    |    Latency    |    Interval   | Pipeline |
+    | min |   max   | min |   max   |   Type   |
+    +-----+---------+-----+---------+----------+
+    |    2|  1048325|    3|  1048326| dataflow |
+    +-----+---------+-----+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------+------------+-----+---------+-----+---------+---------+
+        |               |            |    Latency    |    Interval   | Pipeline|
+        |    Instance   |   Module   | min |   max   | min |   max   |   Type  |
+        +---------------+------------+-----+---------+-----+---------+---------+
+        |Block_proc_U0  |Block_proc  |    2|  1048325|    2|  1048325|   none  |
+        +---------------+------------+-----+---------+-----+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        4|      -|     942|   1655|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        4|      0|     942|   1655|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      0|   ~0   |      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+--------------------------+---------+-------+-----+------+
+    |          Instance          |          Module          | BRAM_18K| DSP48E|  FF |  LUT |
+    +----------------------------+--------------------------+---------+-------+-----+------+
+    |Block_proc_U0               |Block_proc                |        0|      0|  718|  1353|
+    |mem_hw_CONTROL_BUS_s_axi_U  |mem_hw_CONTROL_BUS_s_axi  |        4|      0|  224|   302|
+    +----------------------------+--------------------------+---------+-------+-----+------+
+    |Total                       |                          |        4|      0|  942|  1655|
+    +----------------------------+--------------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_AWREADY  | out |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_AWADDR   |  in |   12|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_WVALID   |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_WREADY   | out |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_WDATA    |  in |   32|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_WSTRB    |  in |    4|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_ARVALID  |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_ARREADY  | out |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_ARADDR   |  in |   12|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_RVALID   | out |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_RREADY   |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_RDATA    | out |   32|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_RRESP    | out |    2|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_BVALID   | out |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_BREADY   |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_BRESP    | out |    2|    s_axi   |  CONTROL_BUS |     array    |
+|ap_clk                     |  in |    1| ap_ctrl_hs |    mem_hw    | return value |
+|ap_rst_n                   |  in |    1| ap_ctrl_hs |    mem_hw    | return value |
+|interrupt                  | out |    1| ap_ctrl_hs |    mem_hw    | return value |
+|out_r_TDATA                | out |   64|    axis    | out_V_data_V |    pointer   |
+|out_r_TKEEP                | out |    8|    axis    | out_V_keep_V |    pointer   |
+|out_r_TSTRB                | out |    8|    axis    | out_V_strb_V |    pointer   |
+|out_r_TUSER                | out |    1|    axis    | out_V_user_V |    pointer   |
+|out_r_TLAST                | out |    1|    axis    | out_V_last_V |    pointer   |
+|out_r_TID                  | out |    1|    axis    |  out_V_id_V  |    pointer   |
+|out_r_TDEST                | out |    1|    axis    | out_V_dest_V |    pointer   |
+|out_r_TVALID               | out |    1|    axis    | out_V_dest_V |    pointer   |
+|out_r_TREADY               |  in |    1|    axis    | out_V_dest_V |    pointer   |
+|in_r_TDATA                 |  in |   64|    axis    |  in_V_data_V |    pointer   |
+|in_r_TKEEP                 |  in |    8|    axis    |  in_V_keep_V |    pointer   |
+|in_r_TSTRB                 |  in |    8|    axis    |  in_V_strb_V |    pointer   |
+|in_r_TUSER                 |  in |    1|    axis    |  in_V_user_V |    pointer   |
+|in_r_TLAST                 |  in |    1|    axis    |  in_V_last_V |    pointer   |
+|in_r_TID                   |  in |    1|    axis    |   in_V_id_V  |    pointer   |
+|in_r_TDEST                 |  in |    1|    axis    |  in_V_dest_V |    pointer   |
+|in_r_TVALID                |  in |    1|    axis    |  in_V_dest_V |    pointer   |
+|in_r_TREADY                | out |    1|    axis    |  in_V_dest_V |    pointer   |
++---------------------------+-----+-----+------------+--------------+--------------+
+

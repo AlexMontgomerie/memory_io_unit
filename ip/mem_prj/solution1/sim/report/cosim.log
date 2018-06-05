@@ -1,0 +1,18 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using ""
+   Compiling apatb_mem_hw.cpp
+   Compiling mem.cpp_pre.cpp.tb.cpp
+   Compiling mem_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+   Build using ""
+   Compiling apatb_mem_hw.cpp
+   Compiling mem.cpp_pre.cpp.tb.cpp
+   Compiling mem_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-12] Generating RTL test bench ...
+WARNING: [COSIM-376] This design mixes AXI slave interface and pipeline mode, which could potentially result in simulation dead-lock and/or get mismatching results.
+WARNING: [COSIM-376] This design mixes AXI slave interface and pipeline mode, which could potentially result in simulation dead-lock and/or get mismatching results.
+INFO: [COSIM-323] Starting verilog simulation. 
