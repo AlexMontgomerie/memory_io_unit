@@ -1,0 +1,684 @@
+
+*** Running vivado
+    with args -log design_1_mem_hw_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mem_hw_1_0.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_mem_hw_1_0.tcl -notrace
+Command: synth_design -top design_1_mem_hw_1_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30123 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1286.734 ; gain = 71.000 ; free physical = 587 ; free virtual = 66427
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_mem_hw_1_0' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ip/design_1_mem_hw_1_0/synth/design_1_mem_hw_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'mem_hw' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw.v:12]
+	Parameter C_S_AXI_CONTROL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_BUS_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CONTROL_BUS_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mem_hw_CONTROL_BUS_s_axi' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 12'b000000000000 
+	Parameter ADDR_GIE bound to: 12'b000000000100 
+	Parameter ADDR_IER bound to: 12'b000000001000 
+	Parameter ADDR_ISR bound to: 12'b000000001100 
+	Parameter ADDR_RW_DATA_0 bound to: 12'b000000010000 
+	Parameter ADDR_RW_CTRL bound to: 12'b000000010100 
+	Parameter ADDR_MASK_DATA_0 bound to: 12'b000000011000 
+	Parameter ADDR_MASK_DATA_1 bound to: 12'b000000011100 
+	Parameter ADDR_MASK_CTRL bound to: 12'b000000100000 
+	Parameter ADDR_TEST_INIT_ARR_V_BASE bound to: 12'b100000000000 
+	Parameter ADDR_TEST_INIT_ARR_V_HIGH bound to: 12'b111111111111 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 12 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mem_hw_CONTROL_BUS_s_axi_ram' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:469]
+	Parameter BYTES bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[4].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[4].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[5].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[5].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[6].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[6].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[7].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[7].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'mem_hw_CONTROL_BUS_s_axi_ram' (1#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:469]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:251]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:287]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:378]
+WARNING: [Synth 8-6014] Unused sequential element int_mask_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:290]
+WARNING: [Synth 8-6014] Unused sequential element int_mask_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:410]
+INFO: [Synth 8-256] done synthesizing module 'mem_hw_CONTROL_BUS_s_axi' (2#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'Block_proc' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_state3 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state4 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:84]
+INFO: [Synth 8-638] synthesizing module 'mem_write' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_state5 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:794]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:898]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_dest_V_1_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:292]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_id_V_1_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:318]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_keep_V_1_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:344]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_strb_V_1_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:406]
+WARNING: [Synth 8-6014] Unused sequential element ap_idle_pp0_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:585]
+WARNING: [Synth 8-6014] Unused sequential element out_r_TDATA_blk_n_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:617]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state5_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:775]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_dest_V_1_vld_in_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:641]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_id_V_1_vld_in_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:649]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_keep_V_1_vld_in_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:657]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_last_V_1_vld_in_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:673]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_strb_V_1_vld_in_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:681]
+WARNING: [Synth 8-6014] Unused sequential element out_stream_V_user_V_1_vld_in_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:697]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_pp0_stage0_subdone_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:757]
+INFO: [Synth 8-256] done synthesizing module 'mem_write' (3#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:10]
+INFO: [Synth 8-638] synthesizing module 'mem_read' [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_read.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_read.v:53]
+WARNING: [Synth 8-6014] Unused sequential element in_r_TDATA_blk_n_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_read.v:100]
+INFO: [Synth 8-256] done synthesizing module 'mem_read' (4#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_read.v:10]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state1_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1323]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state1_ignore_call0_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1327]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state1_ignore_call2_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1331]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state4_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1343]
+INFO: [Synth 8-256] done synthesizing module 'Block_proc' (5#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:10]
+INFO: [Synth 8-256] done synthesizing module 'mem_hw' (6#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw.v:12]
+INFO: [Synth 8-256] done synthesizing module 'design_1_mem_hw_1_0' (7#1) [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ip/design_1_mem_hw_1_0/synth/design_1_mem_hw_1_0.v:57]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[63]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[62]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[61]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[60]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[59]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[58]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[57]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[56]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[55]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[54]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[53]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[52]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[51]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[50]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[49]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[48]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[47]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[46]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[45]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[44]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[43]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[42]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[41]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[40]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[39]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[38]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[37]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[36]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[35]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[34]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[33]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[32]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[31]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[30]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[29]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[28]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[27]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[26]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[25]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[24]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[23]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[22]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[21]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[20]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[19]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[18]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[17]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[16]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[15]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[14]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[13]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[12]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[11]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[10]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[9]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[8]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[7]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[6]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[5]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[4]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[3]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[2]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[1]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDATA[0]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[7]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[6]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[5]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[4]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[3]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[2]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[1]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TKEEP[0]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[7]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[6]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[5]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[4]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[3]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[2]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[1]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TSTRB[0]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TUSER[0]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TID[0]
+WARNING: [Synth 8-3331] design mem_read has unconnected port in_r_TDEST[0]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[31]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[30]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[29]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[28]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[27]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[26]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[25]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[24]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[23]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[22]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[21]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[20]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[19]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[18]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[17]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[16]
+WARNING: [Synth 8-3331] design Block_proc has unconnected port rw[15]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1334.234 ; gain = 118.500 ; free physical = 403 ; free virtual = 66193
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1334.234 ; gain = 118.500 ; free physical = 383 ; free virtual = 66034
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ip/design_1_mem_hw_1_0/constraints/mem_hw_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ip/design_1_mem_hw_1_0/constraints/mem_hw_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/am9215/memory_io_unit/mem_io_unit_testing.runs/design_1_mem_hw_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/am9215/memory_io_unit/mem_io_unit_testing.runs/design_1_mem_hw_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1744.801 ; gain = 0.500 ; free physical = 473 ; free virtual = 64856
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 695 ; free virtual = 65078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 688 ; free virtual = 65071
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/am9215/memory_io_unit/mem_io_unit_testing.runs/design_1_mem_hw_1_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 698 ; free virtual = 65080
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element int_test_init_arr_V_shift_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_hw_CONTROL_BUS_s_axi.v:459]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond6_fu_203_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_flatten_fu_191_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element indvar_flatten_reg_139_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:476]
+WARNING: [Synth 8-6014] Unused sequential element tmp_1_mid2_v_v_reg_286_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:543]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_8_fu_119_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 661 ; free virtual = 65044
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 9     
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 24    
+	                1 Bit    Registers := 75    
++---RAMs : 
+	              16K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 31    
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   2 Input      4 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 42    
+	   4 Input      2 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 46    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mem_hw_CONTROL_BUS_s_axi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
++---RAMs : 
+	              16K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 28    
+	   2 Input      8 Bit        Muxes := 2     
+Module mem_hw_CONTROL_BUS_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               12 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module mem_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 26    
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+Module mem_read 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module Block_proc 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 48    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 15    
+	   4 Input      2 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 27    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_data_V_0_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:458]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_data_V_0_payload_A_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:962]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_data_V_0_payload_B_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:968]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_keep_V_0_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:566]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_keep_V_0_payload_A_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:998]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_keep_V_0_payload_B_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1004]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_strb_V_0_sel_rd_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:638]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_strb_V_0_payload_A_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1022]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/in_V_strb_V_0_payload_B_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/Block_proc.v:1028]
+INFO: [Synth 8-5546] ROM "Block_proc_U0/grp_mem_write_fu_76/exitcond_flatten_fu_191_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Block_proc_U0/grp_mem_write_fu_76/exitcond6_fu_203_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/grp_mem_write_fu_76/indvar_flatten_reg_139_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:476]
+WARNING: [Synth 8-6014] Unused sequential element Block_proc_U0/grp_mem_write_fu_76/tmp_1_mid2_v_v_reg_286_reg was removed.  [/home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ipshared/61e8/hdl/verilog/mem_write.v:543]
+INFO: [Synth 8-3971] The signal mem_hw_CONTROL_BUS_s_axi_U/int_test_init_arr_V/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/out_V_dest_V_1_payload_B_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/out_V_dest_V_1_payload_A_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/out_V_id_V_1_payload_B_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/out_V_id_V_1_payload_A_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[0]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[0]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[1]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[1]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[2]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[2]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[3]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[3]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[4]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[4]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[5]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[5]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[6]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_B_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[6]' (FDE) to 'inst/Block_proc_U0/out_V_strb_V_1_payload_A_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/out_V_strb_V_1_payload_B_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_proc_U0/out_V_strb_V_1_payload_A_reg[7] )
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[0]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[0]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[1]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[1]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[2]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[2]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[3]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[3]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[4]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[4]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[5]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[5]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[6]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_B_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[6]' (FDE) to 'inst/Block_proc_U0/out_V_keep_V_1_payload_A_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Block_proc_U0/out_V_keep_V_1_payload_B_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Block_proc_U0/out_V_keep_V_1_payload_A_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/ap_done_reg_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_keep_V_1_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_keep_V_1_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_keep_V_1_payload_A_reg[7]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_keep_V_1_payload_B_reg[7]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_strb_V_1_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_strb_V_1_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_strb_V_1_payload_A_reg[7]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_strb_V_1_payload_B_reg[7]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_id_V_1_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_id_V_1_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_id_V_1_payload_A_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_id_V_1_payload_B_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_dest_V_1_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_dest_V_1_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_dest_V_1_payload_A_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/out_V_dest_V_1_payload_B_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_data_V_0_state_reg[1]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_data_V_0_state_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_data_V_0_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_keep_V_0_state_reg[1]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_keep_V_0_state_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_keep_V_0_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_strb_V_0_state_reg[1]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_strb_V_0_state_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_strb_V_0_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_user_V_0_state_reg[1]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_user_V_0_state_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_user_V_0_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_user_V_0_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_user_V_0_payload_A_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_user_V_0_payload_B_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_id_V_0_state_reg[1]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_id_V_0_state_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_id_V_0_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_id_V_0_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_id_V_0_payload_A_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_id_V_0_payload_B_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_dest_V_0_sel_rd_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_dest_V_0_sel_wr_reg) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_dest_V_0_payload_A_reg[0]) is unused and will be removed from module mem_hw.
+WARNING: [Synth 8-3332] Sequential element (Block_proc_U0/in_V_dest_V_0_payload_B_reg[0]) is unused and will be removed from module mem_hw.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 560 ; free virtual = 64943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                   | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|mem_hw_CONTROL_BUS_s_axi_ram: | gen_write[1].mem_reg | 256 x 64(READ_FIRST)   | W | R | 256 x 64(READ_FIRST)   | W | R | Port A and B     | 0      | 2      | 
++------------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 386 ; free virtual = 64338
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:00 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 384 ; free virtual = 64241
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/mem_hw_CONTROL_BUS_s_axi_U/int_test_init_arr_V/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/mem_hw_CONTROL_BUS_s_axi_U/int_test_init_arr_V/gen_write[1].mem_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/mem_hw_CONTROL_BUS_s_axi_U/int_test_init_arr_V/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/mem_hw_CONTROL_BUS_s_axi_U/int_test_init_arr_V/gen_write[1].mem_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 422 ; free virtual = 64260
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 505 ; free virtual = 64343
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 505 ; free virtual = 64343
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 480 ; free virtual = 64319
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 479 ; free virtual = 64317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 471 ; free virtual = 64309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 469 ; free virtual = 64307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    15|
+|2     |LUT1     |    34|
+|3     |LUT2     |    15|
+|4     |LUT3     |   288|
+|5     |LUT4     |    86|
+|6     |LUT5     |    81|
+|7     |LUT6     |   143|
+|8     |MUXF7    |     1|
+|9     |RAMB36E1 |     2|
+|10    |FDRE     |   730|
+|11    |FDSE     |     6|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------+-----------------------------+------+
+|      |Instance                       |Module                       |Cells |
++------+-------------------------------+-----------------------------+------+
+|1     |top                            |                             |  1401|
+|2     |  inst                         |mem_hw                       |  1401|
+|3     |    Block_proc_U0              |Block_proc                   |   804|
+|4     |      grp_mem_read_fu_97       |mem_read                     |    12|
+|5     |      grp_mem_write_fu_76      |mem_write                    |   504|
+|6     |    mem_hw_CONTROL_BUS_s_axi_U |mem_hw_CONTROL_BUS_s_axi     |   456|
+|7     |      int_test_init_arr_V      |mem_hw_CONTROL_BUS_s_axi_ram |   115|
++------+-------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 468 ; free virtual = 64307
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 136 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 1744.801 ; gain = 118.500 ; free physical = 502 ; free virtual = 64341
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 1744.801 ; gain = 529.066 ; free physical = 495 ; free virtual = 64333
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+80 Infos, 195 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:06 . Memory (MB): peak = 1761.059 ; gain = 557.906 ; free physical = 701 ; free virtual = 64544
+INFO: [Common 17-1381] The checkpoint '/home/am9215/memory_io_unit/mem_io_unit_testing.runs/design_1_mem_hw_1_0_synth_1/design_1_mem_hw_1_0.dcp' has been generated.
+WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: /home/am9215/memory_io_unit/mem_io_unit_testing.cache/ip/2017.1/4ec9b56e36e11ac4
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/am9215/memory_io_unit/mem_io_unit_testing.runs/design_1_mem_hw_1_0_synth_1/design_1_mem_hw_1_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.58 . Memory (MB): peak = 1791.574 ; gain = 0.000 ; free physical = 691 ; free virtual = 64535
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  5 18:01:24 2018...

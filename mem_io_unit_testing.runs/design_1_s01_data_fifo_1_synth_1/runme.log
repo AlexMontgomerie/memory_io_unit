@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log design_1_s01_data_fifo_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_s01_data_fifo_1.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_s01_data_fifo_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.148 ; gain = 7.016 ; free physical = 1406 ; free virtual = 64505
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_s01_data_fifo_1, cache-ID = e7fcfa53d11011f2.
+config_ip_cache: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.148 ; gain = 8.000 ; free physical = 3480 ; free virtual = 66551
