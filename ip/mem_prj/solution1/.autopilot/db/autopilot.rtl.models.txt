@@ -1,5 +1,9 @@
+fifo_w32_d1_A
+fifo_w32_d1_A
+start_for_mem_hw_bkb
 mem_hw_CONTROL_BUS_s_axi
+mem_hw_entry3
+mem_hw_entry28
 mem_read
 mem_write
-Block_proc
 mem_hw

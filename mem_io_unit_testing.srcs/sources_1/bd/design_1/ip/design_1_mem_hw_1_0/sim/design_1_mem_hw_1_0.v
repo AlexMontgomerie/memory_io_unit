@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:mem_hw:1.0
-// IP Revision: 1806081730
+// IP Revision: 1806111511
 
 `timescale 1ns/1ps
 

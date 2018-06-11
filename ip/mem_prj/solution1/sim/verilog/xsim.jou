@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jun 11 15:09:25 2018
+# Process ID: 18550
+# Current directory: /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/mem_hw/xsim_script.tcl}
+# Log file: /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/xsim.log
+# Journal file: /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/mem_hw/xsim_script.tcl
+source mem_hw.tcl

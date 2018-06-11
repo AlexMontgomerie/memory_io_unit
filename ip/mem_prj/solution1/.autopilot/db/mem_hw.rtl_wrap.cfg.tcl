@@ -245,7 +245,7 @@ set Const4 "0"
 set Volatile4 "0"
 set Pointer4 "0"
 set Reference4 "0"
-set Dims4 [list 8]
+set Dims4 [list 256]
 set Interface4 "wire"
 set DataType4 "[list ap_uint 32 ]"
 set Port4 [list $PortName4 $Interface4 $DataType4 $Pointer4 $Dims4 $Const4 $Volatile4 $ArrayOpt4]

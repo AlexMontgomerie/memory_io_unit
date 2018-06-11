@@ -12,10 +12,13 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="mem_prj" solutionName="solution1" date="2018-06-11T14:12:32.858+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'mem_hw.entry28' to 'mem_hw_entry28'." projectName="mem_prj" solutionName="solution1" date="2018-06-11T15:06:18.583+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'mem_hw.entry3' to 'mem_hw_entry3'." projectName="mem_prj" solutionName="solution1" date="2018-06-11T15:06:18.562+0100" type="Warning"/>
         <logs message="WARNING: [SYN 201-103] Legalizing function name 'Block__proc' to 'Block_proc'." projectName="mem_prj" solutionName="solution2" date="2018-06-08T17:29:57.828+0100" type="Warning"/>
       </synLog>
-      <simLog/>
+      <simLog>
+        <logs message="WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the &quot;-mt off -v 1&quot; switches to see more information from the C compiler. The following environment variables have been detected:&#xA;    LIBRARY_PATH" projectName="mem_prj" solutionName="solution1" date="2018-06-11T15:09:21.481+0100" type="Warning"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>

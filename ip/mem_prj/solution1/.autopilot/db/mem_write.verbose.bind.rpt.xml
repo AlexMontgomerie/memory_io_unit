@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mem_write'" level="0">
-<item name = "Date">Mon Jun 11 14:12:33 2018
+<item name = "Date">Mon Jun 11 15:06:18 2018
 </item>
 <item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
 <item name = "Project">mem_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">800.00, 10.88, 100.00</column>
+<column name="ap_clk">800.00, 11.30, 100.00</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">19, 19, 19, 19, none</column>
+<column name="">1048323, 1048323, 1048323, 1048323, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- main_loop_data_loop">17, 17, 3, 1, 1, 16, yes</column>
+<column name="- main_loop_data_loop">1048321, 1048321, 3, 1, 1, 1048320, yes</column>
 </table>
 </item>
 </section>

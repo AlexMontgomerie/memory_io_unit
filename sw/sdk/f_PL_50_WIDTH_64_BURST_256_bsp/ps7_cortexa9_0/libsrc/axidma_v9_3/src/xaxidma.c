@@ -907,8 +907,8 @@ u32 XAxiDma_SimpleTransfer(XAxiDma *InstancePtr, UINTPTR BuffAddr, u32 Length,
 
 		/* Writing to the BTT register starts the transfer
 		 */
-		//XAxiDma_WriteReg(InstancePtr->TxBdRing.ChanBase,
-		//			XAXIDMA_BUFFLEN_OFFSET, Length);
+		XAxiDma_WriteReg(InstancePtr->TxBdRing.ChanBase,
+					XAXIDMA_BUFFLEN_OFFSET, Length);
 	}
 	else if(Direction == XAXIDMA_DEVICE_TO_DMA){
 		if ((Length < 1) ||
@@ -967,8 +967,8 @@ u32 XAxiDma_SimpleTransfer(XAxiDma *InstancePtr, UINTPTR BuffAddr, u32 Length,
 			XAXIDMA_CR_OFFSET)| XAXIDMA_CR_RUNSTOP_MASK);
 		/* Writing to the BTT register starts the transfer
 		 */
-		//XAxiDma_WriteReg(InstancePtr->RxBdRing[RingIndex].ChanBase,
-		//			XAXIDMA_BUFFLEN_OFFSET, Length);
+		XAxiDma_WriteReg(InstancePtr->RxBdRing[RingIndex].ChanBase,
+					XAXIDMA_BUFFLEN_OFFSET, Length);
 
 	}
 

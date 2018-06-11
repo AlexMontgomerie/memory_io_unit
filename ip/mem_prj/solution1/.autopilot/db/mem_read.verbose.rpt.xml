@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mem_read'" level="0">
-<item name = "Date">Mon Jun 11 14:12:33 2018
+<item name = "Date">Mon Jun 11 15:06:18 2018
 </item>
 <item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
 <item name = "Project">mem_prj</item>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, -, -</column>
+<column name="Expression">-, -, 0, 7</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 30</column>
-<column name="Register">-, -, 3, -</column>
+<column name="Multiplexer">-, -, -, 93</column>
+<column name="Register">-, -, 14, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -78,17 +78,34 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="in_stream_V_last_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="in_stream_V_last_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="in_stream_V_last_V_0_state_cmp_full">icmp, 0, 0, 1, 2, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">21, 4, 1, 4</column>
+<column name="ap_done">9, 2, 1, 2</column>
 <column name="in_r_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="in_stream_V_data_V_0_state">15, 3, 2, 6</column>
+<column name="in_stream_V_dest_V_0_state">15, 3, 2, 6</column>
+<column name="in_stream_V_last_V_0_data_out">9, 2, 1, 2</column>
+<column name="in_stream_V_last_V_0_state">15, 3, 2, 6</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="in_stream_V_data_V_0_state">2, 0, 2, 0</column>
+<column name="in_stream_V_dest_V_0_state">2, 0, 2, 0</column>
+<column name="in_stream_V_last_V_0_payload_A">1, 0, 1, 0</column>
+<column name="in_stream_V_last_V_0_payload_B">1, 0, 1, 0</column>
+<column name="in_stream_V_last_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="in_stream_V_last_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="in_stream_V_last_V_0_state">2, 0, 2, 0</column>
 </table>
 </item>
 </section>
@@ -102,10 +119,11 @@
 <column name="ap_rst">in, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, mem_read, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="in_r_TDATA">in, 32, axis, in_stream_V_data_V, pointer</column>
-<column name="in_r_TVALID">in, 1, axis, in_stream_V_data_V, pointer</column>
+<column name="in_r_TVALID">in, 1, axis, in_stream_V_dest_V, pointer</column>
 <column name="in_r_TREADY">out, 1, axis, in_stream_V_dest_V, pointer</column>
 <column name="in_r_TDEST">in, 1, axis, in_stream_V_dest_V, pointer</column>
 <column name="in_r_TKEEP">in, 4, axis, in_stream_V_keep_V, pointer</column>

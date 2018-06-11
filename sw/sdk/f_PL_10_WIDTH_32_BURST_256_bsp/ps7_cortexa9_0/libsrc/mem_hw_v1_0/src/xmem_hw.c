@@ -93,22 +93,20 @@ u32 XMem_hw_Get_rw(XMem_hw *InstancePtr) {
     return Data;
 }
 
-void XMem_hw_Set_mask(XMem_hw *InstancePtr, u64 Data) {
+void XMem_hw_Set_mask(XMem_hw *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XMem_hw_WriteReg(InstancePtr->Control_bus_BaseAddress, XMEM_HW_CONTROL_BUS_ADDR_MASK_DATA, (u32)(Data));
-    XMem_hw_WriteReg(InstancePtr->Control_bus_BaseAddress, XMEM_HW_CONTROL_BUS_ADDR_MASK_DATA + 4, (u32)(Data >> 32));
+    XMem_hw_WriteReg(InstancePtr->Control_bus_BaseAddress, XMEM_HW_CONTROL_BUS_ADDR_MASK_DATA, Data);
 }
 
-u64 XMem_hw_Get_mask(XMem_hw *InstancePtr) {
-    u64 Data;
+u32 XMem_hw_Get_mask(XMem_hw *InstancePtr) {
+    u32 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XMem_hw_ReadReg(InstancePtr->Control_bus_BaseAddress, XMEM_HW_CONTROL_BUS_ADDR_MASK_DATA);
-    Data += (u64)XMem_hw_ReadReg(InstancePtr->Control_bus_BaseAddress, XMEM_HW_CONTROL_BUS_ADDR_MASK_DATA + 4) << 32;
     return Data;
 }
 

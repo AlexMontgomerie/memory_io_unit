@@ -15,11 +15,12 @@
 namespace ap_rtl {
 
 struct mem_write : public sc_module {
-    // Port declarations 19
+    // Port declarations 22
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
     sc_in< sc_logic > ap_start;
     sc_out< sc_logic > ap_done;
+    sc_in< sc_logic > ap_continue;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
     sc_out< sc_lv<32> > out_r_TDATA;
@@ -31,8 +32,10 @@ struct mem_write : public sc_module {
     sc_out< sc_lv<1> > out_r_TLAST;
     sc_out< sc_lv<1> > out_r_TID;
     sc_out< sc_lv<1> > out_r_TDEST;
-    sc_in< sc_lv<32> > mask;
-    sc_out< sc_lv<3> > test_init_arr_V_address0;
+    sc_in< sc_lv<32> > mask_dout;
+    sc_in< sc_logic > mask_empty_n;
+    sc_out< sc_logic > mask_read;
+    sc_out< sc_lv<8> > test_init_arr_V_address0;
     sc_out< sc_logic > test_init_arr_V_ce0;
     sc_in< sc_lv<32> > test_init_arr_V_q0;
 
@@ -45,6 +48,7 @@ struct mem_write : public sc_module {
 
     sc_trace_file* mVcdFile;
 
+    sc_signal< sc_logic > ap_done_reg;
     sc_signal< sc_lv<3> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<32> > out_stream_V_data_V_1_data_out;
@@ -125,40 +129,43 @@ struct mem_write : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
     sc_signal< bool > ap_block_pp0_stage0_flag00000000;
-    sc_signal< sc_lv<1> > exitcond_flatten_reg_271;
+    sc_signal< sc_lv<1> > exitcond_flatten_reg_291;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
-    sc_signal< sc_lv<1> > ap_reg_pp0_iter1_exitcond_flatten_reg_271;
-    sc_signal< sc_lv<5> > indvar_flatten_reg_137;
-    sc_signal< sc_lv<2> > i_reg_148;
-    sc_signal< sc_lv<1> > axi_user_V_reg_159;
-    sc_signal< sc_lv<4> > j_reg_174;
-    sc_signal< sc_lv<1> > exitcond_flatten_fu_185_p2;
+    sc_signal< sc_lv<1> > ap_reg_pp0_iter1_exitcond_flatten_reg_291;
+    sc_signal< sc_logic > mask_blk_n;
+    sc_signal< sc_lv<20> > indvar_flatten_reg_157;
+    sc_signal< sc_lv<12> > i_i_reg_168;
+    sc_signal< sc_lv<1> > axi_user_V_reg_179;
+    sc_signal< sc_lv<9> > j_i_reg_194;
+    sc_signal< sc_lv<32> > mask_read_reg_286;
+    sc_signal< bool > ap_block_state1;
+    sc_signal< sc_lv<1> > exitcond_flatten_fu_205_p2;
     sc_signal< bool > ap_block_state2_pp0_stage0_iter0;
     sc_signal< bool > ap_block_state3_pp0_stage0_iter1;
     sc_signal< bool > ap_block_state3_io;
     sc_signal< bool > ap_block_state4_pp0_stage0_iter2;
     sc_signal< bool > ap_block_state4_io;
     sc_signal< bool > ap_block_pp0_stage0_flag00011001;
-    sc_signal< sc_lv<5> > indvar_flatten_next_fu_191_p2;
+    sc_signal< sc_lv<20> > indvar_flatten_next_fu_211_p2;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;
-    sc_signal< sc_lv<2> > tmp_mid2_v_v_fu_217_p3;
-    sc_signal< sc_lv<2> > tmp_mid2_v_v_reg_280;
-    sc_signal< sc_lv<1> > axi_last_V_fu_243_p2;
-    sc_signal< sc_lv<1> > axi_last_V_reg_285;
-    sc_signal< sc_lv<4> > j_1_fu_254_p2;
-    sc_signal< sc_lv<32> > axi_data_V_fu_260_p2;
+    sc_signal< sc_lv<12> > tmp_i_mid2_v_v_fu_237_p3;
+    sc_signal< sc_lv<12> > tmp_i_mid2_v_v_reg_300;
+    sc_signal< sc_lv<1> > axi_last_V_fu_263_p2;
+    sc_signal< sc_lv<1> > axi_last_V_reg_305;
+    sc_signal< sc_lv<9> > j_fu_274_p2;
+    sc_signal< sc_lv<32> > axi_data_V_fu_280_p2;
     sc_signal< bool > ap_block_pp0_stage0_flag00011011;
     sc_signal< sc_logic > ap_condition_pp0_exit_iter0_state2;
-    sc_signal< sc_lv<2> > i_phi_fu_152_p4;
-    sc_signal< sc_lv<1> > axi_user_V_phi_fu_165_p4;
-    sc_signal< sc_lv<64> > tmp_4_fu_249_p1;
+    sc_signal< sc_lv<12> > i_i_phi_fu_172_p4;
+    sc_signal< sc_lv<1> > axi_user_V_phi_fu_185_p4;
+    sc_signal< sc_lv<64> > tmp_4_i_fu_269_p1;
     sc_signal< bool > ap_block_pp0_stage0_flag00001001;
-    sc_signal< sc_lv<1> > exitcond6_fu_197_p2;
-    sc_signal< sc_lv<2> > i_s_fu_211_p2;
-    sc_signal< sc_lv<1> > tmp_fu_225_p1;
-    sc_signal< sc_lv<4> > j_mid2_fu_203_p3;
-    sc_signal< sc_lv<4> > tmp_mid2_fu_229_p3;
-    sc_signal< sc_lv<4> > tmp_2_fu_237_p2;
+    sc_signal< sc_lv<1> > exitcond_i6_fu_217_p2;
+    sc_signal< sc_lv<12> > i4_fu_231_p2;
+    sc_signal< sc_lv<9> > j_i_mid2_fu_223_p3;
+    sc_signal< sc_lv<20> > j_cast3_i_fu_253_p1;
+    sc_signal< sc_lv<20> > tmp_i_mid2_fu_245_p3;
+    sc_signal< sc_lv<20> > tmp_2_i_fu_257_p2;
     sc_signal< sc_logic > ap_CS_fsm_state5;
     sc_signal< bool > ap_block_state5;
     sc_signal< sc_lv<3> > ap_NS_fsm;
@@ -169,8 +176,8 @@ struct mem_write : public sc_module {
     static const sc_lv<3> ap_ST_fsm_state1;
     static const sc_lv<3> ap_ST_fsm_pp0_stage0;
     static const sc_lv<3> ap_ST_fsm_state5;
-    static const bool ap_const_boolean_1;
     static const sc_lv<32> ap_const_lv32_0;
+    static const bool ap_const_boolean_1;
     static const sc_lv<1> ap_const_lv1_0;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<2> ap_const_lv2_0;
@@ -179,14 +186,18 @@ struct mem_write : public sc_module {
     static const sc_lv<2> ap_const_lv2_1;
     static const sc_lv<32> ap_const_lv32_1;
     static const bool ap_const_boolean_0;
-    static const sc_lv<5> ap_const_lv5_0;
-    static const sc_lv<4> ap_const_lv4_0;
+    static const sc_lv<20> ap_const_lv20_0;
+    static const sc_lv<12> ap_const_lv12_0;
+    static const sc_lv<9> ap_const_lv9_0;
     static const sc_lv<4> ap_const_lv4_F;
-    static const sc_lv<5> ap_const_lv5_10;
-    static const sc_lv<5> ap_const_lv5_1;
-    static const sc_lv<4> ap_const_lv4_8;
-    static const sc_lv<3> ap_const_lv3_0;
-    static const sc_lv<4> ap_const_lv4_1;
+    static const sc_lv<4> ap_const_lv4_0;
+    static const sc_lv<20> ap_const_lv20_FFF00;
+    static const sc_lv<20> ap_const_lv20_1;
+    static const sc_lv<9> ap_const_lv9_100;
+    static const sc_lv<12> ap_const_lv12_1;
+    static const sc_lv<8> ap_const_lv8_0;
+    static const sc_lv<20> ap_const_lv20_FFEFF;
+    static const sc_lv<9> ap_const_lv9_1;
     static const sc_lv<32> ap_const_lv32_2;
     // Thread declarations
     void thread_ap_clk_no_reset_();
@@ -197,6 +208,7 @@ struct mem_write : public sc_module {
     void thread_ap_block_pp0_stage0_flag00001001();
     void thread_ap_block_pp0_stage0_flag00011001();
     void thread_ap_block_pp0_stage0_flag00011011();
+    void thread_ap_block_state1();
     void thread_ap_block_state2_pp0_stage0_iter0();
     void thread_ap_block_state3_io();
     void thread_ap_block_state3_pp0_stage0_iter1();
@@ -209,16 +221,19 @@ struct mem_write : public sc_module {
     void thread_ap_idle();
     void thread_ap_idle_pp0();
     void thread_ap_ready();
-    void thread_axi_data_V_fu_260_p2();
-    void thread_axi_last_V_fu_243_p2();
-    void thread_axi_user_V_phi_fu_165_p4();
-    void thread_exitcond6_fu_197_p2();
-    void thread_exitcond_flatten_fu_185_p2();
-    void thread_i_phi_fu_152_p4();
-    void thread_i_s_fu_211_p2();
-    void thread_indvar_flatten_next_fu_191_p2();
-    void thread_j_1_fu_254_p2();
-    void thread_j_mid2_fu_203_p3();
+    void thread_axi_data_V_fu_280_p2();
+    void thread_axi_last_V_fu_263_p2();
+    void thread_axi_user_V_phi_fu_185_p4();
+    void thread_exitcond_flatten_fu_205_p2();
+    void thread_exitcond_i6_fu_217_p2();
+    void thread_i4_fu_231_p2();
+    void thread_i_i_phi_fu_172_p4();
+    void thread_indvar_flatten_next_fu_211_p2();
+    void thread_j_cast3_i_fu_253_p1();
+    void thread_j_fu_274_p2();
+    void thread_j_i_mid2_fu_223_p3();
+    void thread_mask_blk_n();
+    void thread_mask_read();
     void thread_out_r_TDATA();
     void thread_out_r_TDATA_blk_n();
     void thread_out_r_TDEST();
@@ -281,11 +296,10 @@ struct mem_write : public sc_module {
     void thread_out_stream_V_user_V_1_vld_out();
     void thread_test_init_arr_V_address0();
     void thread_test_init_arr_V_ce0();
-    void thread_tmp_2_fu_237_p2();
-    void thread_tmp_4_fu_249_p1();
-    void thread_tmp_fu_225_p1();
-    void thread_tmp_mid2_fu_229_p3();
-    void thread_tmp_mid2_v_v_fu_217_p3();
+    void thread_tmp_2_i_fu_257_p2();
+    void thread_tmp_4_i_fu_269_p1();
+    void thread_tmp_i_mid2_fu_245_p3();
+    void thread_tmp_i_mid2_v_v_fu_237_p3();
     void thread_ap_NS_fsm();
 };
 

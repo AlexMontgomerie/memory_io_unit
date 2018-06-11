@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jun 11 15:09:23 2018
+# Process ID: 18510
+# Current directory: /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/xsim.dir/mem_hw/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/webtalk.log
+# Journal file: /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/xsim.dir/mem_hw/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/xsim.dir/mem_hw/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Jun 11 15:09:25 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx_2017.1/Vivado/2017.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Jun 11 15:09:25 2018...

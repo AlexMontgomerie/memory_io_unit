@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /home/juju/mem_io_unit_testing/ip/mem_prj/solution1 opened at Mon Jun 11 14:12:52 BST 2018
+INFO: [HLS 200-0] Workspace /home/juju/mem_io_unit_testing/ip/mem_prj/solution1 opened at Mon Jun 11 15:11:29 BST 2018
 INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 800 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 800ns.
 INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
@@ -12,12 +12,12 @@ INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.lib 
 INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.lib 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.lib 
 INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.lib 
 INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.lib 
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.lib 
@@ -62,8 +62,560 @@ INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.hlp 
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command     import_lib returned 0; 0.02 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv7.lib 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_hp.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv.hlp 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_hp.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     set_part xc7z020clg484-1 
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         license_isbetapart xc7z020 
+INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0 sec.
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command     set_part returned 0; 0.04 sec.
+INFO: [HLS 200-100] Execute     get_default_platform 
+INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command   open_solution returned 0; 0.18 sec.
+INFO: [HLS 200-100] Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.09 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry3.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry28.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_read.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_write.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry3.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry28.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_read.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_write.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.compgen.tcl 
+INFO: [HLS 200-100] Execute       source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.06 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry3.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry28.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_read.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_write.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.08 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.08 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry3.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry28.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_read.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_write.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
 INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
 INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
@@ -96,39 +648,135 @@ INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/
 INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
 INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
-INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
-INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     import_lib /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6 
-INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv7.lib 
-INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_hp.lib 
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv.hlp 
-INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.hlp 
-INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/target_info.tcl 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.hlp 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.hlp 
-INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.hlp 
-INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_hp.hlp 
-INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Command     import_lib returned 0; 0.01 sec.
 INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
-INFO: [HLS 200-100] Execute     set_part xc7z020clg484-1 
-INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
-INFO: [HLS 200-100] Execute         get_default_platform 
-INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
-INFO: [HLS 200-100] Execute         license_isbetapart xc7z020 
-INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0.01 sec.
-INFO: [HLS 200-100] Execute         get_default_platform 
-INFO: [HLS 200-100] Command         get_default_platform returned 0; 
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry3.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw_entry28.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_read.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_write.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/mem_hw.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute         source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source /opt/Xilinx_2017.1/Vivado_HLS/2017.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source /home/juju/mem_io_unit_testing/ip/mem_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command   export_design returned 0; 27.84 sec.
+INFO: [HLS 200-100] Command ap_source returned 0; 28.02 sec.
+INFO: [HLS 200-100] Execute cleanup_all 
+INFO: [HLS 200-100] Command cleanup_all returned 0; 0 sec.

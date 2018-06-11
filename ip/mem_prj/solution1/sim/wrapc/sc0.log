@@ -1,0 +1,5 @@
+   Build using "/opt/Xilinx_2017.1/Vivado_HLS/2017.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_mem_hw.cpp
+   Compiling mem.cpp_pre.cpp.tb.cpp
+   Compiling mem_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

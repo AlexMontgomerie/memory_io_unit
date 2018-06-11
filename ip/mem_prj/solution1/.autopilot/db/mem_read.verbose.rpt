@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'mem_read'
 ================================================================
-* Date:           Mon Jun 11 14:12:33 2018
+* Date:           Mon Jun 11 15:06:18 2018
 
 * Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
 * Project:        mem_prj
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      7|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      -|       -|      -|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|     30|
-|Register         |        -|      -|       3|      -|
+|Multiplexer      |        -|      -|       -|     93|
+|Register         |        -|      -|      14|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|       3|     30|
+|Total            |        0|      0|      14|    100|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -82,26 +82,48 @@
     N/A
 
     * Expression: 
-    N/A
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+    |            Variable Name            | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+    |in_stream_V_last_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |in_stream_V_last_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |in_stream_V_last_V_0_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
+    |ap_block_state1                      |    or    |      0|  0|   2|           1|           1|
+    +-------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                |          |      0|  0|   7|           5|           4|
+    +-------------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +------------------+----+-----------+-----+-----------+
-    |       Name       | LUT| Input Size| Bits| Total Bits|
-    +------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm         |  21|          4|    1|          4|
-    |in_r_TDATA_blk_n  |   9|          2|    1|          2|
-    +------------------+----+-----------+-----+-----------+
-    |Total             |  30|          6|    2|          6|
-    +------------------+----+-----------+-----+-----------+
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  21|          4|    1|          4|
+    |ap_done                        |   9|          2|    1|          2|
+    |in_r_TDATA_blk_n               |   9|          2|    1|          2|
+    |in_stream_V_data_V_0_state     |  15|          3|    2|          6|
+    |in_stream_V_dest_V_0_state     |  15|          3|    2|          6|
+    |in_stream_V_last_V_0_data_out  |   9|          2|    1|          2|
+    |in_stream_V_last_V_0_state     |  15|          3|    2|          6|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  93|         19|   10|         28|
+    +-------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-----------+---+----+-----+-----------+
-    |    Name   | FF| LUT| Bits| Const Bits|
-    +-----------+---+----+-----+-----------+
-    |ap_CS_fsm  |  3|   0|    3|          0|
-    +-----------+---+----+-----+-----------+
-    |Total      |  3|   0|    3|          0|
-    +-----------+---+----+-----+-----------+
+    +--------------------------------+---+----+-----+-----------+
+    |              Name              | FF| LUT| Bits| Const Bits|
+    +--------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                       |  3|   0|    3|          0|
+    |ap_done_reg                     |  1|   0|    1|          0|
+    |in_stream_V_data_V_0_state      |  2|   0|    2|          0|
+    |in_stream_V_dest_V_0_state      |  2|   0|    2|          0|
+    |in_stream_V_last_V_0_payload_A  |  1|   0|    1|          0|
+    |in_stream_V_last_V_0_payload_B  |  1|   0|    1|          0|
+    |in_stream_V_last_V_0_sel_rd     |  1|   0|    1|          0|
+    |in_stream_V_last_V_0_sel_wr     |  1|   0|    1|          0|
+    |in_stream_V_last_V_0_state      |  2|   0|    2|          0|
+    +--------------------------------+---+----+-----+-----------+
+    |Total                           | 14|   0|   14|          0|
+    +--------------------------------+---+----+-----+-----------+
 
 
 
@@ -116,10 +138,11 @@
 |ap_rst       |  in |    1| ap_ctrl_hs |      mem_read      | return value |
 |ap_start     |  in |    1| ap_ctrl_hs |      mem_read      | return value |
 |ap_done      | out |    1| ap_ctrl_hs |      mem_read      | return value |
+|ap_continue  |  in |    1| ap_ctrl_hs |      mem_read      | return value |
 |ap_idle      | out |    1| ap_ctrl_hs |      mem_read      | return value |
 |ap_ready     | out |    1| ap_ctrl_hs |      mem_read      | return value |
 |in_r_TDATA   |  in |   32|    axis    | in_stream_V_data_V |    pointer   |
-|in_r_TVALID  |  in |    1|    axis    | in_stream_V_data_V |    pointer   |
+|in_r_TVALID  |  in |    1|    axis    | in_stream_V_dest_V |    pointer   |
 |in_r_TREADY  | out |    1|    axis    | in_stream_V_dest_V |    pointer   |
 |in_r_TDEST   |  in |    1|    axis    | in_stream_V_dest_V |    pointer   |
 |in_r_TKEEP   |  in |    4|    axis    | in_stream_V_keep_V |    pointer   |
@@ -140,7 +163,7 @@ ExposeGlobal: 0
 IsTopModel: 0
 ResetActiveHigh: 1
 IsCombinational: 2
-IsDatapathOnly: 2
+IsDatapathOnly: 0
 HasWiredReturn: 1
 HasMFsm: 0
 HasVarLatency: 1
@@ -174,7 +197,7 @@ IsGatedGlobalClock: 0
 
  <State 1>: 0.00ns
 ST_1: StgValue_4 (8)  [1/1] 0.00ns
-.critedge:0  call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+.critedge:0  call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ST_1: StgValue_5 (9)  [1/1] 0.00ns
 .critedge:1  br label %._crit_edge
@@ -182,16 +205,16 @@ ST_1: StgValue_5 (9)  [1/1] 0.00ns
 
  <State 2>: 0.00ns
 ST_2: StgValue_6 (11)  [1/1] 0.00ns  loc: mem.cpp:9
-._crit_edge:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str10435) nounwind
+._crit_edge:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str) nounwind
 
 ST_2: tmp (12)  [1/1] 0.00ns  loc: mem.cpp:9
-._crit_edge:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str10435)
+._crit_edge:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str)
 
 ST_2: StgValue_8 (13)  [1/1] 0.00ns  loc: mem.cpp:10
-._crit_edge:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str10436) nounwind
+._crit_edge:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
 
 ST_2: StgValue_9 (14)  [1/1] 0.00ns  loc: mem.cpp:11
-._crit_edge:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str10436) nounwind
+._crit_edge:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str1) nounwind
 
 ST_2: empty (15)  [1/1] 0.00ns  loc: mem.cpp:12
 ._crit_edge:4  %empty = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V)
@@ -199,8 +222,8 @@ ST_2: empty (15)  [1/1] 0.00ns  loc: mem.cpp:12
 ST_2: tmp_last_V (16)  [1/1] 0.00ns  loc: mem.cpp:12
 ._crit_edge:5  %tmp_last_V = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty, 4
 
-ST_2: empty_3 (17)  [1/1] 0.00ns  loc: mem.cpp:14
-._crit_edge:6  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str10435, i32 %tmp)
+ST_2: empty_4 (17)  [1/1] 0.00ns  loc: mem.cpp:14
+._crit_edge:6  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str, i32 %tmp)
 
 ST_2: StgValue_13 (18)  [1/1] 0.00ns  loc: mem.cpp:9
 ._crit_edge:7  br i1 %tmp_last_V, label %0, label %._crit_edge
@@ -244,7 +267,7 @@ StgValue_8  (specpipeline     ) [ 0000]
 StgValue_9  (speclooptripcount) [ 0000]
 empty       (read             ) [ 0000]
 tmp_last_V  (extractvalue     ) [ 0010]
-empty_3     (specregionend    ) [ 0000]
+empty_4     (specregionend    ) [ 0000]
 StgValue_13 (br               ) [ 0000]
 StgValue_14 (ret              ) [ 0000]
 </LifeTime>
@@ -329,7 +352,7 @@ StgValue_14 (ret              ) [ 0000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10441"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -347,7 +370,7 @@ StgValue_14 (ret              ) [ 0000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10442"/></StgValue>
+<StgValue><ssdm name="p_str7"/></StgValue>
 </bind>
 </comp>
 
@@ -365,7 +388,7 @@ StgValue_14 (ret              ) [ 0000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10436"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -383,7 +406,7 @@ StgValue_14 (ret              ) [ 0000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10435"/></StgValue>
+<StgValue><ssdm name="p_str"/></StgValue>
 </bind>
 </comp>
 
@@ -507,7 +530,7 @@ StgValue_14 (ret              ) [ 0000]
   - Chain level:
 	State 1
 	State 2
-		empty_3 : 1
+		empty_4 : 1
 		StgValue_13 : 1
 	State 3
 

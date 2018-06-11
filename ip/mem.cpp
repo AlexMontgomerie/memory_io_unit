@@ -57,6 +57,10 @@ void mem_hw(AXI_STREAM& out, AXI_STREAM& in, int rw, unsigned int mask, data_t t
 	#pragma HLS INTERFACE axis port=out
 	#pragma HLS INTERFACE axis port=in
 
+	mem_read(in);
+	mem_write(out,mask,test_init_arr);
+
+	/*
 	if(rw&(READ|WRITE))
 	{
 #pragma HLS DATAFLOW
@@ -67,5 +71,5 @@ void mem_hw(AXI_STREAM& out, AXI_STREAM& in, int rw, unsigned int mask, data_t t
 		mem_read(in);
 	else if(rw&WRITE)
 		mem_write(out,mask,test_init_arr);
-
+	*/
 }

@@ -1,0 +1,71 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx_2017.1/Vivado/2017.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.1
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx_2017.1/Vivado/2017.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_mem_hw_top -prj mem_hw.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile /opt/Xilinx_2017.1/Vivado/2017.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s mem_hw 
+Multi-threading is on. Using 6 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_hw.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_mem_hw_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_axi_slave_CONTROL_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CONTROL_BUS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_hw_entry28.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_hw_entry28
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_hw_entry3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_hw_entry3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/fifo_w32_d1_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w32_d1_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w32_d1_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_axi_s_out_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_hw_CONTROL_BUS_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_hw_CONTROL_BUS_s_axi
+INFO: [VRFC 10-311] analyzing module mem_hw_CONTROL_BUS_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_read.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_write.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_axi_s_in_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/start_for_mem_hw_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_mem_hw_bkb_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_mem_hw_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/sim/verilog/mem_hw.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_hw
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mem_hw_CONTROL_BUS_s_axi_ram_def...
+Compiling module xil_defaultlib.mem_hw_CONTROL_BUS_s_axi(C_S_AXI...
+Compiling module xil_defaultlib.mem_hw_entry3
+Compiling module xil_defaultlib.mem_hw_entry28
+Compiling module xil_defaultlib.mem_read
+Compiling module xil_defaultlib.mem_write
+Compiling module xil_defaultlib.fifo_w32_d1_A_shiftReg(DATA_WIDT...
+Compiling module xil_defaultlib.fifo_w32_d1_A
+Compiling module xil_defaultlib.start_for_mem_hw_bkb_shiftReg(DA...
+Compiling module xil_defaultlib.start_for_mem_hw_bkb
+Compiling module xil_defaultlib.mem_hw
+Compiling module xil_defaultlib.fifo(DEPTH=1048320,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=1048320,WIDTH=4)
+Compiling module xil_defaultlib.fifo(DEPTH=1048320,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_out_r
+Compiling module xil_defaultlib.AESL_axi_s_in_r
+Compiling module xil_defaultlib.AESL_axi_slave_CONTROL_BUS
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(IN_CHA...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_I...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit_1
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.apatb_mem_hw_top
+Built simulation snapshot mem_hw

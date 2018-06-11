@@ -1,6 +1,174 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 15:13:33 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_2_0 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806111427) to (Rev. 1806111511)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 15:13:33 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_1_0 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806111427) to (Rev. 1806111511)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 15:13:33 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_0_1 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806111427) to (Rev. 1806111511)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 15:13:33 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_0_0 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806111427) to (Rev. 1806111511)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 14:28:55 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_2_0 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806081730) to (Rev. 1806111427)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 14:28:55 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_1_0 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806081730) to (Rev. 1806111427)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 14:28:54 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_0_1 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806081730) to (Rev. 1806111427)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 11 14:28:54 2018
+| Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_mem_hw_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_mem_hw_0_0 (xilinx.com:hls:mem_hw:1.0) from (Rev. 1806081730) to (Rev. 1806111427)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
 | Date         : Fri Jun  8 17:32:10 2018
 | Host         : alex-HP-Compaq-Elite-8300-CMT running 64-bit Ubuntu 16.04.4 LTS
 | Command      : upgrade_ip

@@ -29,9 +29,7 @@
 // 0x014 : reserved
 // 0x018 : Data signal of mask
 //         bit 31~0 - mask[31:0] (Read/Write)
-// 0x01c : Data signal of mask
-//         bit 31~0 - mask[63:32] (Read/Write)
-// 0x020 : reserved
+// 0x01c : reserved
 // 0x400 ~
 // 0x7ff : Memory 'test_init_arr_V' (256 * 32b)
 //         Word n : bit [31:0] - test_init_arr_V[n]
@@ -44,7 +42,7 @@
 #define XMEM_HW_CONTROL_BUS_ADDR_RW_DATA              0x010
 #define XMEM_HW_CONTROL_BUS_BITS_RW_DATA              32
 #define XMEM_HW_CONTROL_BUS_ADDR_MASK_DATA            0x018
-#define XMEM_HW_CONTROL_BUS_BITS_MASK_DATA            64
+#define XMEM_HW_CONTROL_BUS_BITS_MASK_DATA            32
 #define XMEM_HW_CONTROL_BUS_ADDR_TEST_INIT_ARR_V_BASE 0x400
 #define XMEM_HW_CONTROL_BUS_ADDR_TEST_INIT_ARR_V_HIGH 0x7ff
 #define XMEM_HW_CONTROL_BUS_WIDTH_TEST_INIT_ARR_V     32

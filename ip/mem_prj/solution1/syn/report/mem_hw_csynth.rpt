@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'mem_hw'
 ================================================================
-* Date:           Mon Jun 11 14:12:33 2018
+* Date:           Mon Jun 11 15:06:19 2018
 
 * Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
 * Project:        mem_prj
@@ -20,26 +20,29 @@
     +--------+--------+----------+------------+
     |  Clock | Target | Estimated| Uncertainty|
     +--------+--------+----------+------------+
-    |ap_clk  |  800.00|     10.88|      100.00|
+    |ap_clk  |  800.00|     11.30|      100.00|
     +--------+--------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+----------+
-    |  Latency  |  Interval | Pipeline |
-    | min | max | min | max |   Type   |
-    +-----+-----+-----+-----+----------+
-    |    2|   21|    3|   22| dataflow |
-    +-----+-----+-----+-----+----------+
+    +---------+---------+---------+---------+----------+
+    |      Latency      |      Interval     | Pipeline |
+    |   min   |   max   |   min   |   max   |   Type   |
+    +---------+---------+---------+---------+----------+
+    |  1048325|  1048325|  1048324|  1048324| dataflow |
+    +---------+---------+---------+---------+----------+
 
     + Detail: 
         * Instance: 
-        +---------------+------------+-----+-----+-----+-----+---------+
-        |               |            |  Latency  |  Interval | Pipeline|
-        |    Instance   |   Module   | min | max | min | max |   Type  |
-        +---------------+------------+-----+-----+-----+-----+---------+
-        |Block_proc_U0  |Block_proc  |    2|   21|    2|   21|   none  |
-        +---------------+------------+-----+-----+-----+-----+---------+
+        +-------------------+----------------+---------+---------+---------+---------+---------+
+        |                   |                |      Latency      |      Interval     | Pipeline|
+        |      Instance     |     Module     |   min   |   max   |   min   |   max   |   Type  |
+        +-------------------+----------------+---------+---------+---------+---------+---------+
+        |mem_write_U0       |mem_write       |  1048323|  1048323|  1048323|  1048323|   none  |
+        |mem_read_U0        |mem_read        |        2|        2|        2|        2|   none  |
+        |mem_hw_entry3_U0   |mem_hw_entry3   |        0|        0|        0|        0|   none  |
+        |mem_hw_entry28_U0  |mem_hw_entry28  |        0|        0|        0|        0|   none  |
+        +-------------------+----------------+---------+---------+---------+---------+---------+
 
         * Loop: 
         N/A
@@ -54,18 +57,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       -|      -|
-|FIFO             |        -|      -|       -|      -|
-|Instance         |        2|      -|     550|   1067|
+|Expression       |        -|      -|       0|     78|
+|FIFO             |        0|      -|       0|      2|
+|Instance         |        2|      -|     399|    841|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|      -|
-|Register         |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     54|
+|Register         |        -|      -|       9|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        2|      0|     550|   1067|
+|Total            |        2|      0|     408|    975|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |    ~0   |      0|   ~0   |      2|
+|Utilization (%)  |    ~0   |      0|   ~0   |      1|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -73,10 +76,13 @@
     +----------------------------+--------------------------+---------+-------+-----+-----+
     |          Instance          |          Module          | BRAM_18K| DSP48E|  FF | LUT |
     +----------------------------+--------------------------+---------+-------+-----+-----+
-    |Block_proc_U0               |Block_proc                |        0|      0|  358|  829|
     |mem_hw_CONTROL_BUS_s_axi_U  |mem_hw_CONTROL_BUS_s_axi  |        2|      0|  192|  238|
+    |mem_hw_entry28_U0           |mem_hw_entry28            |        0|      0|    2|   29|
+    |mem_hw_entry3_U0            |mem_hw_entry3             |        0|      0|    3|   29|
+    |mem_read_U0                 |mem_read                  |        0|      0|   14|  100|
+    |mem_write_U0                |mem_write                 |        0|      0|  188|  445|
     +----------------------------+--------------------------+---------+-------+-----+-----+
-    |Total                       |                          |        2|      0|  550| 1067|
+    |Total                       |                          |        2|      0|  399|  841|
     +----------------------------+--------------------------+---------+-------+-----+-----+
 
     * DSP48: 
@@ -86,16 +92,65 @@
     N/A
 
     * FIFO: 
-    N/A
+    +-----------------+---------+---+----+------+-----+---------+
+    |       Name      | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +-----------------+---------+---+----+------+-----+---------+
+    |mask_channel1_U  |        0|  0|   1|     1|   32|       32|
+    |mask_channel_U   |        0|  0|   1|     1|   32|       32|
+    +-----------------+---------+---+----+------+-----+---------+
+    |Total            |        0|  0|   2|     2|   64|       64|
+    +-----------------+---------+---+----+------+-----+---------+
 
     * Expression: 
-    N/A
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |mem_hw_entry3_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |mem_read_U0_ap_ready_count         |     +    |      0|  0|  10|           2|           1|
+    |mem_write_U0_ap_ready_count        |     +    |      0|  0|  10|           2|           1|
+    |mem_hw_entry3_U0_ap_ready_count    |     -    |      0|  0|  10|           2|           1|
+    |mem_read_U0_ap_ready_count         |     -    |      0|  0|  10|           2|           1|
+    |mem_write_U0_ap_ready_count        |     -    |      0|  0|  10|           2|           1|
+    |ap_idle                            |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                      |    and   |      0|  0|   2|           1|           1|
+    |mem_hw_entry3_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |mem_read_U0_ap_start               |    and   |      0|  0|   2|           1|           1|
+    |mem_write_U0_ap_start              |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_mem_hw_entry3_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_mem_read_U0_ap_ready       |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_mem_write_U0_ap_ready      |    or    |      0|  0|   2|           1|           1|
+    |mem_hw_entry3_U0_start_full_n      |    or    |      0|  0|   2|           1|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0|  78|          21|          15|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    N/A
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_mem_hw_entry3_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_mem_read_U0_ap_ready       |   9|          2|    1|          2|
+    |ap_sync_reg_mem_write_U0_ap_ready      |   9|          2|    1|          2|
+    |mem_hw_entry3_U0_ap_ready_count        |   9|          2|    2|          4|
+    |mem_read_U0_ap_ready_count             |   9|          2|    2|          4|
+    |mem_write_U0_ap_ready_count            |   9|          2|    2|          4|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  54|         12|    9|         18|
+    +---------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    N/A
+    +---------------------------------------+---+----+-----+-----------+
+    |                  Name                 | FF| LUT| Bits| Const Bits|
+    +---------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_mem_hw_entry3_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_mem_read_U0_ap_ready       |  1|   0|    1|          0|
+    |ap_sync_reg_mem_write_U0_ap_ready      |  1|   0|    1|          0|
+    |mem_hw_entry3_U0_ap_ready_count        |  2|   0|    2|          0|
+    |mem_read_U0_ap_ready_count             |  2|   0|    2|          0|
+    |mem_write_U0_ap_ready_count            |  2|   0|    2|          0|
+    +---------------------------------------+---+----+-----+-----------+
+    |Total                                  |  9|   0|    9|          0|
+    +---------------------------------------+---+----+-----+-----------+
 
 
 
@@ -108,14 +163,14 @@
 +---------------------------+-----+-----+------------+--------------+--------------+
 |s_axi_CONTROL_BUS_AWVALID  |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_AWREADY  | out |    1|    s_axi   |  CONTROL_BUS |     array    |
-|s_axi_CONTROL_BUS_AWADDR   |  in |    6|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_AWADDR   |  in |   11|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_WVALID   |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_WREADY   | out |    1|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_WDATA    |  in |   32|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_WSTRB    |  in |    4|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_ARVALID  |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_ARREADY  | out |    1|    s_axi   |  CONTROL_BUS |     array    |
-|s_axi_CONTROL_BUS_ARADDR   |  in |    6|    s_axi   |  CONTROL_BUS |     array    |
+|s_axi_CONTROL_BUS_ARADDR   |  in |   11|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_RVALID   | out |    1|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_RREADY   |  in |    1|    s_axi   |  CONTROL_BUS |     array    |
 |s_axi_CONTROL_BUS_RDATA    | out |   32|    s_axi   |  CONTROL_BUS |     array    |

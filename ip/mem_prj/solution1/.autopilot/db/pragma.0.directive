@@ -59,8 +59,5 @@
 <option name="port" positionalBoolean="4" value="in"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="mem_hw" label="">
-<pragma name="DATAFLOW"/>
-</directive>
 </sourceFile>
 </AutoPilot:ProjectResources>

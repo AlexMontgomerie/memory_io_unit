@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mem_hw'" level="0">
-<item name = "Date">Mon Jun 11 14:12:33 2018
+<item name = "Date">Mon Jun 11 15:06:18 2018
 </item>
 <item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
 <item name = "Project">mem_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">800.00, 10.88, 100.00</column>
+<column name="ap_clk">800.00, 11.30, 100.00</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 21, 3, 22, dataflow</column>
+<column name="">1048325, 1048325, 1048324, 1048324, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_Block_proc_fu_82">Block_proc, 2, 21, 2, 21, none</column>
+<column name="grp_mem_write_fu_132">mem_write, 1048323, 1048323, 1048323, 1048323, none</column>
+<column name="grp_mem_read_fu_153">mem_read, 2, 2, 2, 2, none</column>
+<column name="StgValue_9_mem_hw_entry3_fu_171">mem_hw_entry3, 0, 0, 0, 0, none</column>
+<column name="StgValue_10_mem_hw_entry28_fu_178">mem_hw_entry28, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

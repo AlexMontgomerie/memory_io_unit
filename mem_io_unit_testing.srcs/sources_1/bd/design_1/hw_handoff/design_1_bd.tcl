@@ -286,7 +286,7 @@ CONFIG.enable_timer2 {0} \
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
-CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {10} \
+CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {250} \
 CONFIG.PCW_IRQ_F2P_INTR {1} \
 CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {32} \
 CONFIG.PCW_S_AXI_HP1_DATA_WIDTH {32} \

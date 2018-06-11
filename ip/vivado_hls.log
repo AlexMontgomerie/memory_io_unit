@@ -1,10 +1,20 @@
 INFO: [HLS 200-10] Running '/opt/Xilinx_2017.1/Vivado_HLS/2017.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'juju' on host 'alex-HP-Compaq-Elite-8300-CMT' (Linux_x86_64 version 4.13.0-43-generic) on Mon Jun 11 14:12:52 BST 2018
+INFO: [HLS 200-10] For user 'juju' on host 'alex-HP-Compaq-Elite-8300-CMT' (Linux_x86_64 version 4.13.0-43-generic) on Mon Jun 11 15:11:29 BST 2018
 INFO: [HLS 200-10] On os Ubuntu 16.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/juju/mem_io_unit_testing/ip'
 INFO: [HLS 200-10] Opening project '/home/juju/mem_io_unit_testing/ip/mem_prj'.
 INFO: [HLS 200-10] Opening solution '/home/juju/mem_io_unit_testing/ip/mem_prj/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 800ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx_2017.1/Vivado/2017.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 11 15:11:39 2018...

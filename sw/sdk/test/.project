@@ -3,7 +3,7 @@
 	<name>test</name>
 	<comment></comment>
 	<projects>
-		<project>test_10_32_bsp</project>
+		<project>f_PL_250_WIDTH_32_BURST_256_bsp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

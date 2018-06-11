@@ -799,7 +799,7 @@ int hwDeviceSetupInterrupt(int dev_num){
 	return XST_SUCCESS;
 }
 
-int SetupDevice(int dev_num, data_t * in, data_t * out, int data[TEST_ARR_SIZE*2]) {
+int SetupDevice(int dev_num, data_t * in, data_t * out, int data[TEST_ARR_SIZE]) {
 	int status = hwDeviceSetup(dev_num);
 	if(status != XST_SUCCESS){
 		print("Error: example setup failed\n");
@@ -816,7 +816,9 @@ int SetupDevice(int dev_num, data_t * in, data_t * out, int data[TEST_ARR_SIZE*2
 
 
 	//TODO: check length returned
-	XMem_hw_Write_test_init_arr_V_Words(&dev_hw[dev_num], 0, data, TEST_ARR_SIZE);//TEST_ARR_SIZE*2);
+	int len = XMem_hw_Write_test_init_arr_V_Words(&dev_hw[dev_num], 0, data, TEST_ARR_SIZE);//TEST_ARR_SIZE*2);
+
+	printf("len: %d \n\r",len);
 
 	hwDeviceStart(&dev_hw[dev_num]);
 
@@ -1548,6 +1550,8 @@ int timing_test(data_t * in[NUM_HW], data_t * out[NUM_HW]) {
 				(XAxiDma_Busy(&AxiDma[3], XAXIDMA_DEVICE_TO_DMA)) ||
 				(XAxiDma_Busy(&AxiDma[3], XAXIDMA_DMA_TO_DEVICE))
 		);
+			//((XAxiDma_ReadReg(InstancePtr->RegBase + (XAXIDMA_RX_OFFSET * Direction), XAXIDMA_SR_OFFSET) & XAXIDMA_IDLE_MASK) ? FALSE : TRUE)
+
 		break;
 	}
 

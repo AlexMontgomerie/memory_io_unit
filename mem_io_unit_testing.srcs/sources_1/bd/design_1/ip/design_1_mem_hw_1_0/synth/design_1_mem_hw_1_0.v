@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:mem_hw:1.0
-// IP Revision: 1806081730
+// IP Revision: 1806111511
 
 (* X_CORE_INFO = "mem_hw,Vivado 2017.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_mem_hw_1_0,mem_hw,{}" *)
-(* CORE_GENERATION_INFO = "design_1_mem_hw_1_0,mem_hw,{x_ipProduct=Vivado 2017.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=mem_hw,x_ipVersion=1.0,x_ipCoreRevision=1806081730,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_BUS_ADDR_WIDTH=11,C_S_AXI_CONTROL_BUS_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_mem_hw_1_0,mem_hw,{x_ipProduct=Vivado 2017.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=mem_hw,x_ipVersion=1.0,x_ipCoreRevision=1806111511,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_BUS_ADDR_WIDTH=11,C_S_AXI_CONTROL_BUS_DATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_mem_hw_1_0 (
   s_axi_CONTROL_BUS_AWADDR,

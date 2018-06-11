@@ -17,29 +17,24 @@
 <PipelineType>dataflow</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>10.88</EstimatedClockPeriod>
+<EstimatedClockPeriod>11.30</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>2</Best-caseLatency>
-<Average-caseLatency>12</Average-caseLatency>
-<Worst-caseLatency>21</Worst-caseLatency>
-<DataflowPipelineThroughput>
-<range>
-<min>3</min>
-<max>22</max>
-</range>
-</DataflowPipelineThroughput>
-<Interval-min>3</Interval-min>
-<Interval-max>22</Interval-max>
+<Best-caseLatency>1048325</Best-caseLatency>
+<Average-caseLatency>1048325</Average-caseLatency>
+<Worst-caseLatency>1048325</Worst-caseLatency>
+<DataflowPipelineThroughput>1048324</DataflowPipelineThroughput>
+<Interval-min>1048324</Interval-min>
+<Interval-max>1048324</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>2</BRAM_18K>
-<FF>550</FF>
-<LUT>1067</LUT>
+<FF>408</FF>
+<LUT>975</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 <AvailableResources>
@@ -85,7 +80,7 @@
 <IOProtocol>s_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>
@@ -176,7 +171,7 @@
 <IOProtocol>s_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>6</Bits>
+<Bits>11</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>

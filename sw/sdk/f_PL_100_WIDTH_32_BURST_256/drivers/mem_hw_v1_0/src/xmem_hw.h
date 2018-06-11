@@ -89,8 +89,8 @@ void XMem_hw_DisableAutoRestart(XMem_hw *InstancePtr);
 
 void XMem_hw_Set_rw(XMem_hw *InstancePtr, u32 Data);
 u32 XMem_hw_Get_rw(XMem_hw *InstancePtr);
-void XMem_hw_Set_mask(XMem_hw *InstancePtr, u64 Data);
-u64 XMem_hw_Get_mask(XMem_hw *InstancePtr);
+void XMem_hw_Set_mask(XMem_hw *InstancePtr, u32 Data);
+u32 XMem_hw_Get_mask(XMem_hw *InstancePtr);
 u32 XMem_hw_Get_test_init_arr_V_BaseAddress(XMem_hw *InstancePtr);
 u32 XMem_hw_Get_test_init_arr_V_HighAddress(XMem_hw *InstancePtr);
 u32 XMem_hw_Get_test_init_arr_V_TotalBytes(XMem_hw *InstancePtr);

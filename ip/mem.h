@@ -5,15 +5,15 @@
 #include <ap_axi_sdata.h>
 #include <ap_int.h>
 #include "stdlib.h"
-#include "hls_video.h"
+#include "hls_stream.h"
 
 #define TYPE 0
 
 //#define SIZE 262144
-//#define SIZE 1048320
-#define SIZE 16
-//#define TEST_ARR_SIZE 256
-#define TEST_ARR_SIZE 8
+#define SIZE 1048320
+//#define SIZE 16
+#define TEST_ARR_SIZE 256
+//#define TEST_ARR_SIZE 8
 
 #define READ		1
 #define WRITE		2

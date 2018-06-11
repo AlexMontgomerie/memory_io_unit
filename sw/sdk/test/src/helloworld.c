@@ -52,7 +52,7 @@
 #include "xparameters.h"
 #include "mem_test.h"
 #include "interrupt.h"
-//#include "timer.h"
+#include "timer.h"
 
 #define MEM_BASE_ADDR 	0x01000000
 

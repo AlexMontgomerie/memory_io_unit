@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'mem_write'
 ================================================================
-* Date:           Mon Jun 11 14:12:32 2018
+* Date:           Mon Jun 11 15:06:18 2018
 
 * Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
 * Project:        mem_prj
@@ -20,29 +20,29 @@
     +--------+--------+----------+------------+
     |  Clock | Target | Estimated| Uncertainty|
     +--------+--------+----------+------------+
-    |ap_clk  |  800.00|     10.88|      100.00|
+    |ap_clk  |  800.00|     11.30|      100.00|
     +--------+--------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----+-----+-----+---------+
-    |  Latency  |  Interval | Pipeline|
-    | min | max | min | max |   Type  |
-    +-----+-----+-----+-----+---------+
-    |   19|   19|   19|   19|   none  |
-    +-----+-----+-----+-----+---------+
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1048323|  1048323|  1048323|  1048323|   none  |
+    +---------+---------+---------+---------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
-        |                       |  Latency  | Iteration|  Initiation Interval  | Trip |          |
-        |       Loop Name       | min | max |  Latency |  achieved |   target  | Count| Pipelined|
-        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- main_loop_data_loop  |   17|   17|         3|          1|          1|    16|    yes   |
-        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        +-----------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                       |      Latency      | Iteration|  Initiation Interval  |   Trip  |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- main_loop_data_loop  |  1048321|  1048321|         3|          1|          1|  1048320|    yes   |
+        +-----------------------+---------+---------+----------+-----------+-----------+---------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -54,7 +54,7 @@ ExposeGlobal: 0
 ============================================================
 IsTopModel: 0
 ResetActiveHigh: 1
-IsCombinational: 0
+IsCombinational: 2
 IsDatapathOnly: 0
 HasWiredReturn: 1
 HasMFsm: 0
@@ -91,119 +91,143 @@ IsGatedGlobalClock: 0
 5 --> 
 * FSM state operations: 
 
- <State 1>: 1.77ns
+ <State 1>: 2.32ns
 ST_1: empty (10)  [1/1] 0.00ns
-:0  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([8 x i32]* %test_init_arr_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+entry:0  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([256 x i32]* %test_init_arr_V, [1 x i8]* @p_str28, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str28, i32 -1, [1 x i8]* @p_str28, [1 x i8]* @p_str28, [1 x i8]* @p_str28, [1 x i8]* @p_str28, [1 x i8]* @p_str28)
 
 ST_1: StgValue_7 (11)  [1/1] 0.00ns
-:1  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+entry:1  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
-ST_1: mask_read (12)  [1/1] 0.00ns
-:2  %mask_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %mask)
+ST_1: StgValue_8 (12)  [1/1] 0.00ns
+entry:2  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
-ST_1: StgValue_9 (13)  [1/1] 1.77ns  loc: mem.cpp:24
-:3  br label %1
+ST_1: StgValue_9 (13)  [1/1] 0.00ns
+entry:3  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_10 (14)  [1/1] 0.00ns
+entry:4  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_11 (15)  [1/1] 0.00ns
+entry:5  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_12 (16)  [1/1] 0.00ns
+entry:6  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_13 (17)  [1/1] 0.00ns
+entry:7  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_14 (18)  [1/1] 0.00ns
+entry:8  call void (...)* @_ssdm_op_SpecInterface(i32* %mask, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str44, i32 0, i32 0, [1 x i8]* @p_str45, [1 x i8]* @p_str46, [1 x i8]* @p_str47, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str48, [1 x i8]* @p_str49)
+
+ST_1: mask_read (19)  [1/1] 2.32ns
+entry:9  %mask_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %mask)
+
+ST_1: StgValue_16 (20)  [1/1] 0.00ns
+entry:10  call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_17 (21)  [1/1] 1.77ns  loc: mem.cpp:24
+entry:11  br label %0
 
 
- <State 2>: 10.88ns
-ST_2: indvar_flatten (15)  [1/1] 0.00ns
-:0  %indvar_flatten = phi i5 [ 0, %0 ], [ %indvar_flatten_next, %.reset ]
+ <State 2>: 11.30ns
+ST_2: indvar_flatten (23)  [1/1] 0.00ns
+:0  %indvar_flatten = phi i20 [ 0, %entry ], [ %indvar_flatten_next, %.reset ]
 
-ST_2: i (16)  [1/1] 0.00ns  loc: mem.cpp:37
-:1  %i = phi i2 [ 0, %0 ], [ %tmp_mid2_v_v, %.reset ]
+ST_2: i_i (24)  [1/1] 0.00ns  loc: mem.cpp:37
+:1  %i_i = phi i12 [ 0, %entry ], [ %tmp_i_mid2_v_v, %.reset ]
 
-ST_2: axi_user_V (17)  [1/1] 0.00ns
-:2  %axi_user_V = phi i1 [ true, %0 ], [ false, %.reset ]
+ST_2: axi_user_V (25)  [1/1] 0.00ns
+:2  %axi_user_V = phi i1 [ true, %entry ], [ false, %.reset ]
 
-ST_2: j (18)  [1/1] 0.00ns
-:3  %j = phi i4 [ 0, %0 ], [ %j_1, %.reset ]
+ST_2: j_i (26)  [1/1] 0.00ns
+:3  %j_i = phi i9 [ 0, %entry ], [ %j, %.reset ]
 
-ST_2: exitcond_flatten (19)  [1/1] 3.31ns
-:4  %exitcond_flatten = icmp eq i5 %indvar_flatten, -16
+ST_2: exitcond_flatten (27)  [1/1] 3.13ns
+:4  %exitcond_flatten = icmp eq i20 %indvar_flatten, -256
 
-ST_2: indvar_flatten_next (20)  [1/1] 2.66ns
-:5  %indvar_flatten_next = add i5 %indvar_flatten, 1
+ST_2: indvar_flatten_next (28)  [1/1] 3.08ns
+:5  %indvar_flatten_next = add i20 %indvar_flatten, 1
 
-ST_2: StgValue_16 (21)  [1/1] 0.00ns
-:6  br i1 %exitcond_flatten, label %2, label %.reset
+ST_2: StgValue_24 (29)  [1/1] 0.00ns
+:6  br i1 %exitcond_flatten, label %.exit, label %.reset
 
-ST_2: exitcond6 (25)  [1/1] 3.10ns  loc: mem.cpp:26
-.reset:2  %exitcond6 = icmp eq i4 %j, -8
+ST_2: exitcond_i6 (33)  [1/1] 3.02ns  loc: mem.cpp:26
+.reset:2  %exitcond_i6 = icmp eq i9 %j_i, -256
 
-ST_2: j_mid2 (26)  [1/1] 2.07ns  loc: mem.cpp:26
-.reset:3  %j_mid2 = select i1 %exitcond6, i4 0, i4 %j
+ST_2: j_i_mid2 (34)  [1/1] 2.07ns  loc: mem.cpp:26
+.reset:3  %j_i_mid2 = select i1 %exitcond_i6, i9 0, i9 %j_i
 
-ST_2: i_s (27)  [1/1] 2.45ns  loc: mem.cpp:24
-.reset:4  %i_s = add i2 1, %i
+ST_2: i4 (35)  [1/1] 2.88ns  loc: mem.cpp:24
+.reset:4  %i4 = add i12 %i_i, 1
 
-ST_2: tmp_mid2_v_v (28)  [1/1] 2.07ns  loc: mem.cpp:37
-.reset:5  %tmp_mid2_v_v = select i1 %exitcond6, i2 %i_s, i2 %i
+ST_2: tmp_i_mid2_v_v (36)  [1/1] 2.07ns  loc: mem.cpp:37
+.reset:5  %tmp_i_mid2_v_v = select i1 %exitcond_i6, i12 %i4, i12 %i_i
 
-ST_2: tmp (29)  [1/1] 0.00ns  loc: mem.cpp:37
-.reset:6  %tmp = trunc i2 %tmp_mid2_v_v to i1
+ST_2: tmp_i_mid2 (37)  [1/1] 0.00ns  loc: mem.cpp:37
+.reset:6  %tmp_i_mid2 = call i20 @_ssdm_op_BitConcatenate.i20.i12.i8(i12 %tmp_i_mid2_v_v, i8 0)
 
-ST_2: tmp_mid2 (30)  [1/1] 0.00ns  loc: mem.cpp:37
-.reset:7  %tmp_mid2 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i3(i1 %tmp, i3 0)
+ST_2: j_cast3_i (38)  [1/1] 0.00ns  loc: mem.cpp:26
+.reset:7  %j_cast3_i = zext i9 %j_i_mid2 to i20
 
-ST_2: tmp_2 (34)  [1/1] 2.62ns  loc: mem.cpp:37
-.reset:11  %tmp_2 = add i4 %j_mid2, %tmp_mid2
+ST_2: tmp_2_i (42)  [1/1] 3.08ns  loc: mem.cpp:37
+.reset:11  %tmp_2_i = add i20 %j_cast3_i, %tmp_i_mid2
 
-ST_2: axi_last_V (35)  [1/1] 3.10ns  loc: mem.cpp:37
-.reset:12  %axi_last_V = icmp eq i4 %tmp_2, -1
+ST_2: axi_last_V (43)  [1/1] 3.13ns  loc: mem.cpp:37
+.reset:12  %axi_last_V = icmp eq i20 %tmp_2_i, -257
 
-ST_2: tmp_4 (36)  [1/1] 0.00ns  loc: mem.cpp:43
-.reset:13  %tmp_4 = zext i4 %j_mid2 to i64
+ST_2: tmp_4_i (44)  [1/1] 0.00ns  loc: mem.cpp:43
+.reset:13  %tmp_4_i = zext i9 %j_i_mid2 to i64
 
-ST_2: test_init_arr_V_addr (37)  [1/1] 0.00ns  loc: mem.cpp:43
-.reset:14  %test_init_arr_V_addr = getelementptr [8 x i32]* %test_init_arr_V, i64 0, i64 %tmp_4
+ST_2: test_init_arr_V_addr (45)  [1/1] 0.00ns  loc: mem.cpp:43
+.reset:14  %test_init_arr_V_addr = getelementptr [256 x i32]* %test_init_arr_V, i64 0, i64 %tmp_4_i
 
-ST_2: test_init_arr_V_load (38)  [2/2] 2.32ns  loc: mem.cpp:43
+ST_2: test_init_arr_V_load (46)  [2/2] 2.27ns  loc: mem.cpp:43
 .reset:15  %test_init_arr_V_load = load i32* %test_init_arr_V_addr, align 4
 
-ST_2: j_1 (42)  [1/1] 2.62ns  loc: mem.cpp:26
-.reset:19  %j_1 = add i4 1, %j_mid2
+ST_2: j (50)  [1/1] 2.82ns  loc: mem.cpp:26
+.reset:19  %j = add i9 %j_i_mid2, 1
 
 
- <State 3>: 4.39ns
-ST_3: test_init_arr_V_load (38)  [1/2] 2.32ns  loc: mem.cpp:43
+ <State 3>: 4.34ns
+ST_3: test_init_arr_V_load (46)  [1/2] 2.27ns  loc: mem.cpp:43
 .reset:15  %test_init_arr_V_load = load i32* %test_init_arr_V_addr, align 4
 
-ST_3: axi_data_V (39)  [1/1] 2.07ns  loc: mem.cpp:43
+ST_3: axi_data_V (47)  [1/1] 2.07ns  loc: mem.cpp:43
 .reset:16  %axi_data_V = and i32 %test_init_arr_V_load, %mask_read
 
-ST_3: StgValue_31 (40)  [2/2] 0.00ns  loc: mem.cpp:45
+ST_3: StgValue_39 (48)  [2/2] 0.00ns  loc: mem.cpp:45
 .reset:17  call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, i32 %axi_data_V, i4 -1, i4 undef, i1 %axi_user_V, i1 %axi_last_V, i1 undef, i1 undef)
 
-ST_3: StgValue_32 (43)  [1/1] 0.00ns
-.reset:20  br label %1
+ST_3: StgValue_40 (51)  [1/1] 0.00ns
+.reset:20  br label %0
 
 
  <State 4>: 0.00ns
-ST_4: StgValue_33 (23)  [1/1] 0.00ns
+ST_4: StgValue_41 (31)  [1/1] 0.00ns
 .reset:0  call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @main_loop_data_loop_s)
 
-ST_4: StgValue_34 (24)  [1/1] 0.00ns
-.reset:1  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)
+ST_4: StgValue_42 (32)  [1/1] 0.00ns
+.reset:1  call void (...)* @_ssdm_op_SpecLoopTripCount(i64 1048320, i64 1048320, i64 1048320)
 
-ST_4: StgValue_35 (31)  [1/1] 0.00ns  loc: mem.cpp:27
-.reset:8  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str10438) nounwind
+ST_4: StgValue_43 (39)  [1/1] 0.00ns  loc: mem.cpp:27
+.reset:8  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str3) nounwind
 
-ST_4: tmp_3 (32)  [1/1] 0.00ns  loc: mem.cpp:27
-.reset:9  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str10438)
+ST_4: tmp_3_i (40)  [1/1] 0.00ns  loc: mem.cpp:27
+.reset:9  %tmp_3_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str3)
 
-ST_4: StgValue_37 (33)  [1/1] 0.00ns  loc: mem.cpp:29
-.reset:10  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str10436) nounwind
+ST_4: StgValue_45 (41)  [1/1] 0.00ns  loc: mem.cpp:29
+.reset:10  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
 
-ST_4: StgValue_38 (40)  [1/2] 0.00ns  loc: mem.cpp:45
+ST_4: StgValue_46 (48)  [1/2] 0.00ns  loc: mem.cpp:45
 .reset:17  call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %out_stream_V_data_V, i4* %out_stream_V_keep_V, i4* %out_stream_V_strb_V, i1* %out_stream_V_user_V, i1* %out_stream_V_last_V, i1* %out_stream_V_id_V, i1* %out_stream_V_dest_V, i32 %axi_data_V, i4 -1, i4 undef, i1 %axi_user_V, i1 %axi_last_V, i1 undef, i1 undef)
 
-ST_4: empty_2 (41)  [1/1] 0.00ns  loc: mem.cpp:46
-.reset:18  %empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str10438, i32 %tmp_3)
+ST_4: empty_3 (49)  [1/1] 0.00ns  loc: mem.cpp:46
+.reset:18  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str3, i32 %tmp_3_i)
 
 
  <State 5>: 0.00ns
-ST_5: StgValue_40 (45)  [1/1] 0.00ns  loc: mem.cpp:48
-:0  ret void
+ST_5: StgValue_48 (53)  [1/1] 0.00ns
+.exit:0  ret void
 
 
 
@@ -212,22 +236,22 @@ ST_5: StgValue_40 (45)  [1/1] 0.00ns  loc: mem.cpp:48
 ============================================================
 Target clock period: 800ns, clock uncertainty: 100ns.
 
- <State 1>: 1.77ns
+ <State 1>: 2.32ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [15]  (1.77 ns)
+	fifo read on port 'mask' [19]  (2.32 ns)
 
- <State 2>: 10.9ns
+ <State 2>: 11.3ns
 The critical path consists of the following:
-	'phi' operation ('j') with incoming values : ('j', mem.cpp:26) [18]  (0 ns)
-	'icmp' operation ('exitcond6', mem.cpp:26) [25]  (3.1 ns)
-	'select' operation ('j_mid2', mem.cpp:26) [26]  (2.07 ns)
-	'add' operation ('tmp_2', mem.cpp:37) [34]  (2.62 ns)
-	'icmp' operation ('axi.last.V', mem.cpp:37) [35]  (3.1 ns)
+	'phi' operation ('j') with incoming values : ('j', mem.cpp:26) [26]  (0 ns)
+	'icmp' operation ('exitcond_i6', mem.cpp:26) [33]  (3.02 ns)
+	'select' operation ('tmp_i_mid2_v_v', mem.cpp:37) [36]  (2.07 ns)
+	'add' operation ('tmp_2_i', mem.cpp:37) [42]  (3.08 ns)
+	'icmp' operation ('axi.last.V', mem.cpp:37) [43]  (3.13 ns)
 
- <State 3>: 4.39ns
+ <State 3>: 4.34ns
 The critical path consists of the following:
-	'load' operation ('test_init_arr_V_load', mem.cpp:43) on array 'test_init_arr_V' [38]  (2.32 ns)
-	'and' operation ('axi.data.V', mem.cpp:43) [39]  (2.07 ns)
+	'load' operation ('test_init_arr_V_load', mem.cpp:43) on array 'test_init_arr_V' [46]  (2.27 ns)
+	'and' operation ('axi.data.V', mem.cpp:43) [47]  (2.07 ns)
 
  <State 4>: 0ns
 The critical path consists of the following:
