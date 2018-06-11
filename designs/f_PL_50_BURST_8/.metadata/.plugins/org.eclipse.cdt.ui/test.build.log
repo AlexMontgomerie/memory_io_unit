@@ -1,0 +1,97 @@
+13:25:56 **** Build of configuration Debug for project test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:218:11: warning: unused variable 'res' [-Wunused-variable]
+     float res[3][2];
+           ^~~
+../src/helloworld.c:217:6: warning: unused variable 'size' [-Wunused-variable]
+  int size[10];
+      ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/interrupt.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupt.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupt.d" -MT"src/interrupt.o" -o "src/interrupt.o" "../src/interrupt.c"
+Finished building: ../src/interrupt.c
+ 
+Building file: ../src/mem_test.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mem_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/mem_test.d" -MT"src/mem_test.o" -o "src/mem_test.o" "../src/mem_test.c"
+../src/mem_test.c: In function 'deviceScript':
+../src/mem_test.c:1357:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("VccInt \t\t: power= %f (mean), %f (var)\t | voltage= %f (mean), %f (var)\t | current= %f (mean), %f (var)\n\r", res[0][2][0],res[0][2][1],res[0][0][0],res[0][0][1],res[0][1][0],res[0][1][1]);
+  ^~~~~~
+../src/mem_test.c:1357:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/mem_test.c:1357:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/mem_test.c:1314:6: warning: variable 'size' set but not used [-Wunused-but-set-variable]
+  int size[10];
+      ^~~~
+../src/mem_test.c: In function 'deviceScriptStatic':
+../src/mem_test.c:1436:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("VccInt \t\t: power= %f (mean), %f (var)\t | voltage= %f (mean), %f (var)\t | current= %f (mean), %f (var)\n\r", res[0][2][0],res[0][2][1],res[0][0][0],res[0][0][1],res[0][1][0],res[0][1][1]);
+  ^~~~~~
+../src/mem_test.c:1436:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/mem_test.c:1393:6: warning: variable 'size' set but not used [-Wunused-but-set-variable]
+  int size[10];
+      ^~~~
+Finished building: ../src/mem_test.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/pmbus_iic.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmbus_iic.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmbus_iic.d" -MT"src/pmbus_iic.o" -o "src/pmbus_iic.o" "../src/pmbus_iic.c"
+../src/pmbus_iic.c: In function 'simplePowerTestStatistics':
+../src/pmbus_iic.c:222:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("VccInt \t\t: current = mean %f, var %f | voltage = mean %f, var %f\n\r", i_mean[0],i_var[0],v_mean[0],v_var[0]);
+  ^~~~~~
+../src/pmbus_iic.c:222:2: warning: incompatible implicit declaration of built-in function 'printf'
+../src/pmbus_iic.c:222:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/pmbus_iic.c: In function 'setupCalibration':
+../src/pmbus_iic.c:286:6: warning: incompatible implicit declaration of built-in function 'printf'
+      printf("device: %d, page: %d\n\r",device,page);
+      ^~~~~~
+../src/pmbus_iic.c:286:6: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/pmbus_iic.c: In function 'readCurrent_real':
+../src/pmbus_iic.c:529:9: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+     u16 data;
+         ^~~~
+../src/pmbus_iic.c: In function 'displayPower':
+../src/pmbus_iic.c:704:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("|---------------------------------------------------------------|\n");
+  ^~~~~~
+../src/pmbus_iic.c:704:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/pmbus_iic.c: In function 'printPowerInfo':
+../src/pmbus_iic.c:743:3: warning: incompatible implicit declaration of built-in function 'printf'
+   printf("VccInt \t\t: %f\n\r", power_table[i][0]);
+   ^~~~~~
+../src/pmbus_iic.c:743:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+Finished building: ../src/pmbus_iic.c
+ 
+Building file: ../src/timer.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer.d" -MT"src/timer.o" -o "src/timer.o" "../src/timer.c"
+Finished building: ../src/timer.c
+ 
+Building target: test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/ps7_cortexa9_0/lib -o "test.elf"  ./src/helloworld.o ./src/interrupt.o ./src/mem_test.o ./src/platform.o ./src/pmbus_iic.o ./src/timer.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137956	   5220	  39360	 182536	  2c908	test.elf
+Finished building: test.elf.size
+ 
+
+13:25:57 Build Finished (took 868ms)
+

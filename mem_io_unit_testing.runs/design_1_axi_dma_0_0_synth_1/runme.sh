@@ -7,20 +7,20 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/mnt/applications/Xilinx/17.1/SDK/2017.1/bin:/mnt/applications/Xilinx/17.1/Vivado/2017.1/ids_lite/ISE/bin/lin64:/mnt/applications/Xilinx/17.1/Vivado/2017.1/bin
+  PATH=/opt/Xilinx_2017.1/SDK/2017.1/bin:/opt/Xilinx_2017.1/Vivado/2017.1/ids_lite/ISE/bin/lin64:/opt/Xilinx_2017.1/Vivado/2017.1/bin
 else
-  PATH=/mnt/applications/Xilinx/17.1/SDK/2017.1/bin:/mnt/applications/Xilinx/17.1/Vivado/2017.1/ids_lite/ISE/bin/lin64:/mnt/applications/Xilinx/17.1/Vivado/2017.1/bin:$PATH
+  PATH=/opt/Xilinx_2017.1/SDK/2017.1/bin:/opt/Xilinx_2017.1/Vivado/2017.1/ids_lite/ISE/bin/lin64:/opt/Xilinx_2017.1/Vivado/2017.1/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/mnt/applications/Xilinx/17.1/Vivado/2017.1/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/opt/Xilinx_2017.1/Vivado/2017.1/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/mnt/applications/Xilinx/17.1/Vivado/2017.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/opt/Xilinx_2017.1/Vivado/2017.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/am9215/memory_io_unit/mem_io_unit_testing.runs/design_1_axi_dma_0_0_synth_1'
+HD_PWD='/home/juju/mem_io_unit_testing/mem_io_unit_testing.runs/design_1_axi_dma_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

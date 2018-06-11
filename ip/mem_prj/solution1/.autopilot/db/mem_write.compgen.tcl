@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {out_r} \
     metadata {  } \
     op interface \
-    ports { out_r_TDATA { O 64 vector } } \
+    ports { out_r_TDATA { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_stream_V_data_V'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {out_r} \
     metadata {  } \
     op interface \
-    ports { out_r_TKEEP { O 8 vector } } \
+    ports { out_r_TKEEP { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_stream_V_keep_V'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {out_r} \
     metadata {  } \
     op interface \
-    ports { out_r_TSTRB { O 8 vector } } \
+    ports { out_r_TSTRB { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_stream_V_strb_V'"
@@ -151,7 +151,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename test_init_arr_V \
     op interface \
-    ports { test_init_arr_V_address0 { O 8 vector } test_init_arr_V_ce0 { O 1 bit } test_init_arr_V_q0 { I 64 vector } } \
+    ports { test_init_arr_V_address0 { O 3 vector } test_init_arr_V_ce0 { O 1 bit } test_init_arr_V_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'test_init_arr_V'"

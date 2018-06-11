@@ -7,17 +7,17 @@
 <Instance>
 <InstName>Block_proc_U0</InstName>
 <ModuleName>Block_proc</ModuleName>
-<ID>84</ID>
+<ID>82</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_mem_write_fu_76</InstName>
+<InstName>grp_mem_write_fu_74</InstName>
 <ModuleName>mem_write</ModuleName>
-<ID>76</ID>
+<ID>74</ID>
 </Instance>
 <Instance>
-<InstName>grp_mem_read_fu_97</InstName>
+<InstName>grp_mem_read_fu_96</InstName>
 <ModuleName>mem_read</ModuleName>
-<ID>97</ID>
+<ID>96</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -134,7 +134,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -178,7 +178,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -189,7 +189,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -233,20 +233,20 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>800.00</TargetClockPeriod>
 <ClockUncertainty>100.00</ClockUncertainty>
-<EstimatedClockPeriod>8.00</EstimatedClockPeriod>
+<EstimatedClockPeriod>10.88</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>1048323</Best-caseLatency>
-<Average-caseLatency>1048323</Average-caseLatency>
-<Worst-caseLatency>1048323</Worst-caseLatency>
-<PipelineInitiationInterval>1048323</PipelineInitiationInterval>
+<Best-caseLatency>19</Best-caseLatency>
+<Average-caseLatency>19</Average-caseLatency>
+<Worst-caseLatency>19</Worst-caseLatency>
+<PipelineInitiationInterval>19</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <main_loop_data_loop>
 <Name>main_loop_data_loop</Name>
-<TripCount>1048320</TripCount>
-<Latency>1048321</Latency>
+<TripCount>16</TripCount>
+<Latency>17</Latency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>3</PipelineDepth>
 </main_loop_data_loop>
@@ -254,8 +254,8 @@
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>283</FF>
-<LUT>575</LUT>
+<FF>115</FF>
+<LUT>348</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -335,7 +335,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -379,7 +379,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -390,7 +390,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -445,7 +445,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>3</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -467,7 +467,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>
@@ -478,20 +478,20 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>800.00</TargetClockPeriod>
 <ClockUncertainty>100.00</ClockUncertainty>
-<EstimatedClockPeriod>8.00</EstimatedClockPeriod>
+<EstimatedClockPeriod>10.88</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>2</Best-caseLatency>
-<Average-caseLatency>524164</Average-caseLatency>
-<Worst-caseLatency>1048325</Worst-caseLatency>
-<PipelineInitiationInterval>2 ~ 1048325</PipelineInitiationInterval>
+<Average-caseLatency>12</Average-caseLatency>
+<Worst-caseLatency>21</Worst-caseLatency>
+<PipelineInitiationInterval>2 ~ 21</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<FF>718</FF>
-<LUT>1353</LUT>
+<FF>358</FF>
+<LUT>829</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -593,7 +593,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -637,7 +637,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -648,7 +648,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -685,17 +685,6 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mask</name>
-<Object>mask</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>64</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
 <name>out_r_TDATA</name>
 <Object>out_V_data_V</Object>
 <Type>pointer</Type>
@@ -703,7 +692,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -747,7 +736,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -758,7 +747,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -795,6 +784,17 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<name>mask</name>
+<Object>mask</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
 <name>test_init_arr_V_address0</name>
 <Object>test_init_arr_V</Object>
 <Type>array</Type>
@@ -802,7 +802,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>3</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -824,7 +824,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>
@@ -835,27 +835,27 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>800.00</TargetClockPeriod>
 <ClockUncertainty>100.00</ClockUncertainty>
-<EstimatedClockPeriod>8.00</EstimatedClockPeriod>
+<EstimatedClockPeriod>10.88</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>2</Best-caseLatency>
-<Average-caseLatency>524164</Average-caseLatency>
-<Worst-caseLatency>1048325</Worst-caseLatency>
+<Average-caseLatency>12</Average-caseLatency>
+<Worst-caseLatency>21</Worst-caseLatency>
 <DataflowPipelineThroughput>
 <range>
 <min>3</min>
-<max>1048326</max>
+<max>22</max>
 </range>
 </DataflowPipelineThroughput>
-<PipelineInitiationInterval>3 ~ 1048326</PipelineInitiationInterval>
+<PipelineInitiationInterval>3 ~ 22</PipelineInitiationInterval>
 <PipelineType>dataflow</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>4</BRAM_18K>
-<FF>942</FF>
-<LUT>1655</LUT>
+<BRAM_18K>2</BRAM_18K>
+<FF>550</FF>
+<LUT>1067</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 </AreaEstimates>
@@ -894,7 +894,7 @@
 <IOProtocol>s_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>12</Bits>
+<Bits>6</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>
@@ -985,7 +985,7 @@
 <IOProtocol>s_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>12</Bits>
+<Bits>6</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>1</HasCtrl>
@@ -1122,7 +1122,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -1134,7 +1134,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -1146,7 +1146,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -1230,7 +1230,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -1242,7 +1242,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -1254,7 +1254,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

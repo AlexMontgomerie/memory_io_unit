@@ -10,7 +10,7 @@ void mem_read(AXI_STREAM& in_stream)
 #pragma HLS pipeline II=1
 #pragma HLS loop_tripcount avg=0 max=0
 	      in_stream >> r_tmp;
-	      eol = r_tmp.last.to_int();
+	      eol = r_tmp.last;
 	  }
 }
 
@@ -40,14 +40,14 @@ void mem_write(AXI_STREAM& out_stream, int mask, data_t test_init_arr[TEST_ARR_S
 				axi.last = 0;
 			}
 
-			axi.data = ((data_t) test_init_arr[j])&mask;
+			axi.data = ((data_t) test_init_arr[j])&(mask);
 			axi.keep = -1;
 			out_stream << axi;
 		}
 	}
 }
 
-void mem_hw(AXI_STREAM& out, AXI_STREAM& in, int rw, unsigned long mask, data_t test_init_arr[TEST_ARR_SIZE])
+void mem_hw(AXI_STREAM& out, AXI_STREAM& in, int rw, unsigned int mask, data_t test_init_arr[TEST_ARR_SIZE])
 {
 	#pragma HLS DATAFLOW
 	#pragma HLS INTERFACE s_axilite port=return bundle=CONTROL_BUS

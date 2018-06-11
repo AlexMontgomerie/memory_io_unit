@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!DOCTYPE boost_serialization>
-<boost_serialization signature="serialization::archive" version="15">
+<boost_serialization signature="serialization::archive" version="14">
   <syndb class_id="0" tracking_level="0" version="0">
     <userIPLatency>-1</userIPLatency>
     <userIPName/>
@@ -28,7 +28,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>64</bitwidth>
+            <bitwidth>32</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -56,7 +56,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -84,7 +84,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -252,7 +252,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>/home/juju/mem_test_rw_seperate/ip</first>
+                  <first>/home/juju/mem_io_unit_testing/ip</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -270,7 +270,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>84</bitwidth>
+            <bitwidth>44</bitwidth>
           </Value>
           <oprand_edges>
             <count>8</count>
@@ -301,7 +301,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/juju/mem_test_rw_seperate/ip</first>
+                  <first>/home/juju/mem_io_unit_testing/ip</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -343,7 +343,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/juju/mem_test_rw_seperate/ip</first>
+                  <first>/home/juju/mem_io_unit_testing/ip</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -387,7 +387,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/juju/mem_test_rw_seperate/ip</first>
+                  <first>/home/juju/mem_io_unit_testing/ip</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -918,10 +918,6 @@
           </second>
         </item>
       </dp_register_resource>
-      <dp_dsp_resource>
-        <count>0</count>
-        <item_version>0</item_version>
-      </dp_dsp_resource>
       <dp_component_map class_id="40" tracking_level="0" version="0">
         <count>0</count>
         <item_version>0</item_version>

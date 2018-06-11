@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;f_PL_10_BURST_256_bsp&apos;" deleteContents="false" description="Delete resource &apos;f_PL_10_BURST_256_bsp&apos;" element1="/f_PL_10_BURST_256_bsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1528299823592"/>
+</session>

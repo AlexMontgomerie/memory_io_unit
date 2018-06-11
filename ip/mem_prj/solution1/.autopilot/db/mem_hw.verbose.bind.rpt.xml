@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mem_hw'" level="0">
-<item name = "Date">Mon Jun  4 11:41:29 2018
+<item name = "Date">Mon Jun 11 14:12:33 2018
 </item>
-<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
 <item name = "Project">mem_prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">800.00, 8.00, 100.00</column>
+<column name="ap_clk">800.00, 10.88, 100.00</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 1048325, 3, 1048326, dataflow</column>
+<column name="">2, 21, 3, 22, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_Block_proc_fu_84">Block_proc, 2, 1048325, 2, 1048325, none</column>
+<column name="grp_Block_proc_fu_82">Block_proc, 2, 21, 2, 21, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

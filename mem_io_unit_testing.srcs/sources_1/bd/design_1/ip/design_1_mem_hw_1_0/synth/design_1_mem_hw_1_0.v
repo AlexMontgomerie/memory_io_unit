@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:mem_hw:1.0
-// IP Revision: 1806041144
+// IP Revision: 1806081730
 
 (* X_CORE_INFO = "mem_hw,Vivado 2017.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_mem_hw_1_0,mem_hw,{}" *)
-(* CORE_GENERATION_INFO = "design_1_mem_hw_1_0,mem_hw,{x_ipProduct=Vivado 2017.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=mem_hw,x_ipVersion=1.0,x_ipCoreRevision=1806041144,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_BUS_ADDR_WIDTH=12,C_S_AXI_CONTROL_BUS_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_mem_hw_1_0,mem_hw,{x_ipProduct=Vivado 2017.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=mem_hw,x_ipVersion=1.0,x_ipCoreRevision=1806081730,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_BUS_ADDR_WIDTH=11,C_S_AXI_CONTROL_BUS_DATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_mem_hw_1_0 (
   s_axi_CONTROL_BUS_AWADDR,
@@ -96,7 +96,7 @@ module design_1_mem_hw_1_0 (
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWADDR" *)
-input wire [11 : 0] s_axi_CONTROL_BUS_AWADDR;
+input wire [10 : 0] s_axi_CONTROL_BUS_AWADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWVALID" *)
 input wire s_axi_CONTROL_BUS_AWVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS AWREADY" *)
@@ -116,7 +116,7 @@ output wire s_axi_CONTROL_BUS_BVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS BREADY" *)
 input wire s_axi_CONTROL_BUS_BREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARADDR" *)
-input wire [11 : 0] s_axi_CONTROL_BUS_ARADDR;
+input wire [10 : 0] s_axi_CONTROL_BUS_ARADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARVALID" *)
 input wire s_axi_CONTROL_BUS_ARVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CONTROL_BUS ARREADY" *)
@@ -140,11 +140,11 @@ output wire out_r_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_r TREADY" *)
 input wire out_r_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_r TDATA" *)
-output wire [63 : 0] out_r_TDATA;
+output wire [31 : 0] out_r_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_r TKEEP" *)
-output wire [7 : 0] out_r_TKEEP;
+output wire [3 : 0] out_r_TKEEP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_r TSTRB" *)
-output wire [7 : 0] out_r_TSTRB;
+output wire [3 : 0] out_r_TSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_r TUSER" *)
 output wire [0 : 0] out_r_TUSER;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 out_r TLAST" *)
@@ -158,11 +158,11 @@ input wire in_r_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_r TREADY" *)
 output wire in_r_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_r TDATA" *)
-input wire [63 : 0] in_r_TDATA;
+input wire [31 : 0] in_r_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_r TKEEP" *)
-input wire [7 : 0] in_r_TKEEP;
+input wire [3 : 0] in_r_TKEEP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_r TSTRB" *)
-input wire [7 : 0] in_r_TSTRB;
+input wire [3 : 0] in_r_TSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_r TUSER" *)
 input wire [0 : 0] in_r_TUSER;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_r TLAST" *)
@@ -173,7 +173,7 @@ input wire [0 : 0] in_r_TID;
 input wire [0 : 0] in_r_TDEST;
 
   mem_hw #(
-    .C_S_AXI_CONTROL_BUS_ADDR_WIDTH(12),
+    .C_S_AXI_CONTROL_BUS_ADDR_WIDTH(11),
     .C_S_AXI_CONTROL_BUS_DATA_WIDTH(32)
   ) inst (
     .s_axi_CONTROL_BUS_AWADDR(s_axi_CONTROL_BUS_AWADDR),

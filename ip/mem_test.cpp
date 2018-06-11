@@ -66,7 +66,7 @@ int check_stream(AXI_STREAM& stream, data_t data[SIZE])
 
 int main() {
 
-	srand(1);
+	//srand(1);
 
 	AXI_VAL axi;
 
@@ -99,21 +99,6 @@ int main() {
 	mem_hw(test_out,test_in,(READ|WRITE),MASK,test_arr);
 
 	err = check_stream(test_out,res_arr);
-	if(err)
-		return err;
-
-	printf("full run test successful \n");
-
-	//############################################
-
-	//############################################
-	//test full run
-	init_stream(test_in);
-
-	mem_hw(test_out,test_in,WRITE,MASK,test_arr);
-
-	err = check_stream(test_out,res_arr);
-
 	if(err)
 		return err;
 

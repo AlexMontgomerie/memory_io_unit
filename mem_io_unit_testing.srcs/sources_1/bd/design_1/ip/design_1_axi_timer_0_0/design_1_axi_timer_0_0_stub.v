@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-// Date        : Tue Jun  5 18:02:46 2018
+// Date        : Tue Jun  5 18:02:40 2018
 // Host        : ee-boxer0 running 64-bit CentOS release 6.9 (Final)
-// Command     : write_verilog -force -mode synth_stub
-//               /home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_axi_timer_0_0 -prefix
+//               design_1_axi_timer_0_0_ design_1_axi_timer_0_0_stub.v
 // Design      : design_1_axi_timer_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

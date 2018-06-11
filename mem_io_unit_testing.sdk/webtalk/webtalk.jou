@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# 
+# Start of session at: Wed Jun  6 11:53:09 2018
+# Process ID: 13101
+# Current directory: /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/webtalk/webtalk.log
+# Journal file: /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

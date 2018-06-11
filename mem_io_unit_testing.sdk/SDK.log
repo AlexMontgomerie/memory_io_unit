@@ -4,3 +4,53 @@
 18:47:36 INFO  : Successfully done setting XSCT server connection channel  
 18:47:39 INFO  : Processing command line option -hwspec /home/am9215/memory_io_unit/mem_io_unit_testing.sdk/design_1_wrapper.hdf.
 18:47:39 INFO  : Successfully done setting SDK workspace  
+11:51:17 INFO  : Launching XSCT server: xsct -n -interactive /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/temp_xsdb_launch_script.tcl
+11:51:18 INFO  : XSCT server has started successfully.
+11:51:18 INFO  : Successfully done setting XSCT server connection channel  
+11:51:18 INFO  : Successfully done setting SDK workspace  
+11:51:21 INFO  : Registering command handlers for SDK TCF services
+11:51:21 INFO  : Processing command line option -hwspec /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf.
+11:52:57 INFO  : Launching XSCT server: xsct -n -interactive /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/temp_xsdb_launch_script.tcl
+11:52:58 INFO  : XSCT server has started successfully.
+11:52:59 INFO  : Successfully done setting XSCT server connection channel  
+11:52:59 INFO  : Successfully done setting SDK workspace  
+11:53:01 INFO  : Registering command handlers for SDK TCF services
+11:53:01 INFO  : Processing command line option -hwspec /home/juju/mem_io_unit_testing/hw_files/design_1_wrapper.hdf.
+13:28:07 INFO  : Launching XSCT server: xsct -n -interactive /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/temp_xsdb_launch_script.tcl
+13:28:08 INFO  : XSCT server has started successfully.
+13:28:08 INFO  : Successfully done setting XSCT server connection channel  
+13:28:10 INFO  : Successfully done setting SDK workspace  
+13:28:11 INFO  : Registering command handlers for SDK TCF services
+13:28:11 INFO  : Processing command line option -hwspec /home/juju/mem_io_unit_testing/hw_files/design_1_wrapper.hdf.
+13:28:13 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+13:28:13 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1528460418000,  Project:1528282218000
+13:28:13 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_2' is different from /home/juju/mem_io_unit_testing/hw_files/design_1_wrapper.hdf.
+13:28:13 INFO  : Copied contents of /home/juju/mem_io_unit_testing/hw_files/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_2/system.hdf.
+13:28:16 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:28:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1528457824000,  Project:1528280320000
+13:28:19 INFO  : Project design_1_wrapper_hw_platform_1's source hardware specification located at /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:28:25 INFO  : Copied contents of /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+13:28:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:28:27 INFO  : Clearing existing target manager status.
+13:28:31 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:28:31 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:28:31 INFO  : Clearing existing target manager status.
+13:28:31 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:28:31 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:28:34 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:09:47 INFO  : Launching XSCT server: xsct -n -interactive /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/temp_xsdb_launch_script.tcl
+15:09:49 INFO  : XSCT server has started successfully.
+15:09:49 INFO  : Successfully done setting XSCT server connection channel  
+15:09:50 INFO  : Successfully done setting SDK workspace  
+15:09:51 INFO  : Registering command handlers for SDK TCF services
+15:09:52 INFO  : Processing command line option -hwspec /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf.
+15:09:53 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+15:09:54 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1528460418000,  Project:1528457824000
+15:09:54 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf.
+15:09:54 INFO  : Copied contents of /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+15:09:57 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:09:59 INFO  : Clearing existing target manager status.
+15:10:01 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:10:01 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:11:02 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

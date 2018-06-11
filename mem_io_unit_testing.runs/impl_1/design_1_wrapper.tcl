@@ -51,17 +51,17 @@ set rc [catch {
   set_property board_part xilinx.com:zc702:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/am9215/memory_io_unit/mem_io_unit_testing.cache/wt [current_project]
-  set_property parent.project_path /home/am9215/memory_io_unit/mem_io_unit_testing.xpr [current_project]
-  set_property ip_repo_paths /home/am9215/memory_io_unit/ip [current_project]
-  set_property ip_output_repo /home/am9215/memory_io_unit/mem_io_unit_testing.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/juju/mem_io_unit_testing/mem_io_unit_testing.cache/wt [current_project]
+  set_property parent.project_path /home/juju/mem_io_unit_testing/mem_io_unit_testing.xpr [current_project]
+  set_property ip_repo_paths /home/juju/mem_io_unit_testing/ip [current_project]
+  set_property ip_output_repo /home/juju/mem_io_unit_testing/mem_io_unit_testing.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet /home/am9215/memory_io_unit/mem_io_unit_testing.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet /home/juju/mem_io_unit_testing/mem_io_unit_testing.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -suppress
   set_param project.isImplRun true
-  add_files /home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/design_1.bd
-  set_property is_locked true [get_files /home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/design_1.bd]
+  add_files /home/juju/mem_io_unit_testing/mem_io_unit_testing.srcs/sources_1/bd/design_1/design_1.bd
+  set_property is_locked true [get_files /home/juju/mem_io_unit_testing/mem_io_unit_testing.srcs/sources_1/bd/design_1/design_1.bd]
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg484-1

@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.4</Version>
+<Version>2017.1</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -17,20 +17,20 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.00</EstimatedClockPeriod>
+<EstimatedClockPeriod>10.88</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1048323</Best-caseLatency>
-<Average-caseLatency>1048323</Average-caseLatency>
-<Worst-caseLatency>1048323</Worst-caseLatency>
-<Interval-min>1048323</Interval-min>
-<Interval-max>1048323</Interval-max>
+<Best-caseLatency>19</Best-caseLatency>
+<Average-caseLatency>19</Average-caseLatency>
+<Worst-caseLatency>19</Worst-caseLatency>
+<Interval-min>19</Interval-min>
+<Interval-max>19</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <main_loop_data_loop>
-<TripCount>1048320</TripCount>
-<Latency>1048321</Latency>
+<TripCount>16</TripCount>
+<Latency>17</Latency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>3</PipelineDepth>
 </main_loop_data_loop>
@@ -39,8 +39,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>283</FF>
-<LUT>575</LUT>
+<FF>115</FF>
+<LUT>348</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -127,7 +127,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -171,7 +171,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -182,7 +182,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -237,7 +237,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>3</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -259,7 +259,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

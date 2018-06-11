@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mem_hw'" level="0">
-<item name = "Date">Mon Jun  4 11:41:30 2018
+<item name = "Date">Mon Jun 11 14:12:33 2018
 </item>
-<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
 <item name = "Project">mem_prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -15,21 +15,21 @@
 <section name = "" level="1">
 <item name = "Target clock period (ns)">800.00</item>
 <item name = "Clock uncertainty (ns)">100.00</item>
-<item name = "Estimated clock period (ns)">8.00</item>
+<item name = "Estimated clock period (ns)">10.88</item>
 </section>
 </item>
 <item name = "Latency (clock cycles)">
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 1048325, 3, 1048326, dataflow</column>
+<column name="">2, 21, 3, 22, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="Block_proc_U0">Block_proc, 2, 1048325, 2, 1048325, none</column>
+<column name="Block_proc_U0">Block_proc, 2, 21, 2, 21, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,20 +48,20 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, -, -</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">4, -, 942, 1655</column>
+<column name="Instance">2, -, 550, 1067</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, -</column>
 <column name="Register">-, -, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">1, 0, ~0, 3</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, 2</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Block_proc_U0">Block_proc, 0, 0, 718, 1353</column>
-<column name="mem_hw_CONTROL_BUS_s_axi_U">mem_hw_CONTROL_BUS_s_axi, 4, 0, 224, 302</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 358, 829</column>
+<column name="mem_hw_CONTROL_BUS_s_axi_U">mem_hw_CONTROL_BUS_s_axi, 2, 0, 192, 238</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -97,14 +97,14 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="s_axi_CONTROL_BUS_AWVALID">in, 1, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_AWREADY">out, 1, s_axi, CONTROL_BUS, array</column>
-<column name="s_axi_CONTROL_BUS_AWADDR">in, 12, s_axi, CONTROL_BUS, array</column>
+<column name="s_axi_CONTROL_BUS_AWADDR">in, 6, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_WVALID">in, 1, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_WREADY">out, 1, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_WDATA">in, 32, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_WSTRB">in, 4, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_ARVALID">in, 1, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_ARREADY">out, 1, s_axi, CONTROL_BUS, array</column>
-<column name="s_axi_CONTROL_BUS_ARADDR">in, 12, s_axi, CONTROL_BUS, array</column>
+<column name="s_axi_CONTROL_BUS_ARADDR">in, 6, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_RVALID">out, 1, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_RREADY">in, 1, s_axi, CONTROL_BUS, array</column>
 <column name="s_axi_CONTROL_BUS_RDATA">out, 32, s_axi, CONTROL_BUS, array</column>
@@ -115,18 +115,18 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, mem_hw, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_hs, mem_hw, return value</column>
 <column name="interrupt">out, 1, ap_ctrl_hs, mem_hw, return value</column>
-<column name="out_r_TDATA">out, 64, axis, out_V_data_V, pointer</column>
-<column name="out_r_TKEEP">out, 8, axis, out_V_keep_V, pointer</column>
-<column name="out_r_TSTRB">out, 8, axis, out_V_strb_V, pointer</column>
+<column name="out_r_TDATA">out, 32, axis, out_V_data_V, pointer</column>
+<column name="out_r_TKEEP">out, 4, axis, out_V_keep_V, pointer</column>
+<column name="out_r_TSTRB">out, 4, axis, out_V_strb_V, pointer</column>
 <column name="out_r_TUSER">out, 1, axis, out_V_user_V, pointer</column>
 <column name="out_r_TLAST">out, 1, axis, out_V_last_V, pointer</column>
 <column name="out_r_TID">out, 1, axis, out_V_id_V, pointer</column>
 <column name="out_r_TDEST">out, 1, axis, out_V_dest_V, pointer</column>
 <column name="out_r_TVALID">out, 1, axis, out_V_dest_V, pointer</column>
 <column name="out_r_TREADY">in, 1, axis, out_V_dest_V, pointer</column>
-<column name="in_r_TDATA">in, 64, axis, in_V_data_V, pointer</column>
-<column name="in_r_TKEEP">in, 8, axis, in_V_keep_V, pointer</column>
-<column name="in_r_TSTRB">in, 8, axis, in_V_strb_V, pointer</column>
+<column name="in_r_TDATA">in, 32, axis, in_V_data_V, pointer</column>
+<column name="in_r_TKEEP">in, 4, axis, in_V_keep_V, pointer</column>
+<column name="in_r_TSTRB">in, 4, axis, in_V_strb_V, pointer</column>
 <column name="in_r_TUSER">in, 1, axis, in_V_user_V, pointer</column>
 <column name="in_r_TLAST">in, 1, axis, in_V_last_V, pointer</column>
 <column name="in_r_TID">in, 1, axis, in_V_id_V, pointer</column>
@@ -138,11 +138,11 @@
 </section>
 
 <section name = "Critical Path" level="0">
-<item name = "Max Delay">1.96</item>
+<item name = "Max Delay">3.07</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
 <column name="'mask'">read, 1.00, 1.00, -, -, -, s_axi, read, &apos;mask&apos;, -, -, -, -, -</column>
-<column name="">call, 0.96, 1.96, -, -, -, -, -, -, -, -, -, Block__proc, -</column>
+<column name="">call, 2.07, 3.07, -, -, -, -, -, -, -, -, -, Block__proc, -</column>
 </table>
 </item>
 </section>

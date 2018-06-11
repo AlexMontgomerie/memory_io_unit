@@ -162,11 +162,12 @@ proc create_root_design { parentCell } {
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
   set_property -dict [ list \
+CONFIG.c_addr_width {32} \
 CONFIG.c_include_mm2s_dre {1} \
 CONFIG.c_include_s2mm_dre {1} \
 CONFIG.c_include_sg {0} \
-CONFIG.c_m_axi_mm2s_data_width {64} \
-CONFIG.c_m_axis_mm2s_tdata_width {64} \
+CONFIG.c_m_axi_mm2s_data_width {32} \
+CONFIG.c_m_axis_mm2s_tdata_width {32} \
 CONFIG.c_mm2s_burst_size {256} \
 CONFIG.c_s2mm_burst_size {256} \
 CONFIG.c_sg_include_stscntrl_strm {0} \
@@ -176,11 +177,12 @@ CONFIG.c_sg_length_width {23} \
   # Create instance: axi_dma_1, and set properties
   set axi_dma_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_1 ]
   set_property -dict [ list \
+CONFIG.c_addr_width {32} \
 CONFIG.c_include_mm2s_dre {1} \
 CONFIG.c_include_s2mm_dre {1} \
 CONFIG.c_include_sg {0} \
-CONFIG.c_m_axi_mm2s_data_width {64} \
-CONFIG.c_m_axis_mm2s_tdata_width {64} \
+CONFIG.c_m_axi_mm2s_data_width {32} \
+CONFIG.c_m_axis_mm2s_tdata_width {32} \
 CONFIG.c_mm2s_burst_size {256} \
 CONFIG.c_s2mm_burst_size {256} \
 CONFIG.c_sg_include_stscntrl_strm {0} \
@@ -190,11 +192,12 @@ CONFIG.c_sg_length_width {23} \
   # Create instance: axi_dma_2, and set properties
   set axi_dma_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_2 ]
   set_property -dict [ list \
+CONFIG.c_addr_width {32} \
 CONFIG.c_include_mm2s_dre {1} \
 CONFIG.c_include_s2mm_dre {1} \
 CONFIG.c_include_sg {0} \
-CONFIG.c_m_axi_mm2s_data_width {64} \
-CONFIG.c_m_axis_mm2s_tdata_width {64} \
+CONFIG.c_m_axi_mm2s_data_width {32} \
+CONFIG.c_m_axis_mm2s_tdata_width {32} \
 CONFIG.c_mm2s_burst_size {256} \
 CONFIG.c_s2mm_burst_size {256} \
 CONFIG.c_sg_include_stscntrl_strm {0} \
@@ -204,11 +207,12 @@ CONFIG.c_sg_length_width {23} \
   # Create instance: axi_dma_3, and set properties
   set axi_dma_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_3 ]
   set_property -dict [ list \
+CONFIG.c_addr_width {32} \
 CONFIG.c_include_mm2s_dre {1} \
 CONFIG.c_include_s2mm_dre {1} \
 CONFIG.c_include_sg {0} \
-CONFIG.c_m_axi_mm2s_data_width {64} \
-CONFIG.c_m_axis_mm2s_tdata_width {64} \
+CONFIG.c_m_axi_mm2s_data_width {32} \
+CONFIG.c_m_axis_mm2s_tdata_width {32} \
 CONFIG.c_mm2s_burst_size {256} \
 CONFIG.c_s2mm_burst_size {256} \
 CONFIG.c_sg_include_stscntrl_strm {0} \
@@ -282,7 +286,12 @@ CONFIG.enable_timer2 {0} \
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
+CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {10} \
 CONFIG.PCW_IRQ_F2P_INTR {1} \
+CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {32} \
+CONFIG.PCW_S_AXI_HP1_DATA_WIDTH {32} \
+CONFIG.PCW_S_AXI_HP2_DATA_WIDTH {32} \
+CONFIG.PCW_S_AXI_HP3_DATA_WIDTH {32} \
 CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
 CONFIG.PCW_USE_S_AXI_HP0 {1} \
 CONFIG.PCW_USE_S_AXI_HP1 {1} \

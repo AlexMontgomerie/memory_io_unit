@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!DOCTYPE boost_serialization>
-<boost_serialization signature="serialization::archive" version="15">
+<boost_serialization signature="serialization::archive" version="14">
 <syndb class_id="0" tracking_level="0" version="0">
 	<userIPLatency>-1</userIPLatency>
 	<userIPName></userIPName>
@@ -28,7 +28,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -56,7 +56,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -84,7 +84,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -245,14 +245,14 @@
 						<id>15</id>
 						<name>empty</name>
 						<fileName>mem.cpp</fileName>
-						<fileDirectory>/home/juju/mem_test_rw_seperate/ip</fileDirectory>
+						<fileDirectory>/home/juju/mem_io_unit_testing/ip</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>mem_read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="11" tracking_level="0" version="0">
-								<first>/home/juju/mem_test_rw_seperate/ip</first>
+								<first>/home/juju/mem_io_unit_testing/ip</first>
 								<second class_id="12" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -270,7 +270,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>84</bitwidth>
+					<bitwidth>44</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>8</count>
@@ -294,14 +294,14 @@
 						<id>16</id>
 						<name>tmp_last_V</name>
 						<fileName>mem.cpp</fileName>
-						<fileDirectory>/home/juju/mem_test_rw_seperate/ip</fileDirectory>
+						<fileDirectory>/home/juju/mem_io_unit_testing/ip</fileDirectory>
 						<lineNumber>12</lineNumber>
 						<contextFuncName>mem_read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/juju/mem_test_rw_seperate/ip</first>
+								<first>/home/juju/mem_io_unit_testing/ip</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -336,14 +336,14 @@
 						<id>18</id>
 						<name></name>
 						<fileName>mem.cpp</fileName>
-						<fileDirectory>/home/juju/mem_test_rw_seperate/ip</fileDirectory>
+						<fileDirectory>/home/juju/mem_io_unit_testing/ip</fileDirectory>
 						<lineNumber>9</lineNumber>
 						<contextFuncName>mem_read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/juju/mem_test_rw_seperate/ip</first>
+								<first>/home/juju/mem_io_unit_testing/ip</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -380,14 +380,14 @@
 						<id>20</id>
 						<name></name>
 						<fileName>mem.cpp</fileName>
-						<fileDirectory>/home/juju/mem_test_rw_seperate/ip</fileDirectory>
+						<fileDirectory>/home/juju/mem_io_unit_testing/ip</fileDirectory>
 						<lineNumber>15</lineNumber>
 						<contextFuncName>mem_read</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/juju/mem_test_rw_seperate/ip</first>
+								<first>/home/juju/mem_io_unit_testing/ip</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>

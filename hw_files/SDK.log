@@ -1,0 +1,6 @@
+13:27:21 INFO  : Registering command handlers for SDK TCF services
+13:27:25 INFO  : Launching XSCT server: xsct -n -interactive /home/juju/mem_io_unit_testing/hw_files/temp_xsdb_launch_script.tcl
+13:27:28 INFO  : XSCT server has started successfully.
+13:27:29 INFO  : Successfully done setting XSCT server connection channel  
+13:27:29 INFO  : Successfully done setting SDK workspace  
+13:27:29 INFO  : Processing command line option -hwspec /home/juju/mem_io_unit_testing/mem_io_unit_testing.sdk/design_1_wrapper.hdf.

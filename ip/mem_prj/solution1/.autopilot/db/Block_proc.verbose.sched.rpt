@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'Block_proc'
 ================================================================
-* Date:           Mon Jun  4 11:41:29 2018
+* Date:           Mon Jun 11 14:12:33 2018
 
-* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
 * Project:        mem_prj
 * Solution:       solution1
 * Product family: zynq
@@ -20,17 +20,17 @@
     +--------+--------+----------+------------+
     |  Clock | Target | Estimated| Uncertainty|
     +--------+--------+----------+------------+
-    |ap_clk  |  800.00|      8.00|      100.00|
+    |ap_clk  |  800.00|     10.88|      100.00|
     +--------+--------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+---------+-----+---------+---------+
-    |    Latency    |    Interval   | Pipeline|
-    | min |   max   | min |   max   |   Type  |
-    +-----+---------+-----+---------+---------+
-    |    2|  1048325|    2|  1048325|   none  |
-    +-----+---------+-----+---------+---------+
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|   21|    2|   21|   none  |
+    +-----+-----+-----+-----+---------+
 
     + Detail: 
         * Instance: 
@@ -65,8 +65,8 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 4
-* Pipeline : 0
+* Number of FSM states: 4
+* Pipeline: 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -78,37 +78,75 @@ IsGatedGlobalClock: 0
 3 --> 
 	4  / true
 4 --> 
-
 * FSM state operations: 
 
- <State 1> : 1.77ns
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecMemCore([256 x i64]* %test_init_arr_V, [1 x i8]* @p_str3, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str3, i32 -1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3)"
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %in_V_dest_V, i1* %in_V_id_V, i1* %in_V_last_V, i1* %in_V_user_V, i8* %in_V_strb_V, i8* %in_V_keep_V, i64* %in_V_data_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %out_V_dest_V, i1* %out_V_id_V, i1* %out_V_last_V, i1* %out_V_user_V, i8* %out_V_strb_V, i8* %out_V_keep_V, i64* %out_V_data_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mask_read = call i64 @_ssdm_op_Read.ap_auto.i64(i64 %mask)"
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%rw_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %rw)"
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %rw_read to i2" [mem.cpp:60]
-ST_1 : Operation 11 [1/1] (0.95ns)   --->   "%tmp_8 = icmp eq i2 %tmp, 0" [mem.cpp:60]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %0, label %1" [mem.cpp:60]
-ST_1 : Operation 13 [2/2] (1.76ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:63]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i64 %mask_read to i32" [mem.cpp:64]
-ST_1 : Operation 15 [2/2] (0.00ns)   --->   "call fastcc void @mem_write(i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %tmp_2, [256 x i64]* %test_init_arr_V)" [mem.cpp:64]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i32 %rw_read to i1" [mem.cpp:66]
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %tmp_1, label %2, label %._crit_edge" [mem.cpp:66]
-ST_1 : Operation 18 [2/2] (1.76ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:67]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ <State 1>: 2.07ns
+ST_1: empty (18)  [1/1] 0.00ns
+newFuncRoot:0  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([8 x i32]* %test_init_arr_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
 
- <State 2> : 0.00ns
-ST_2 : Operation 19 [1/2] (0.00ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:63]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 20 [1/2] (0.00ns)   --->   "call fastcc void @mem_write(i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %tmp_2, [256 x i64]* %test_init_arr_V)" [mem.cpp:64]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br label %.ret.exitStub" [mem.cpp:65]
+ST_1: StgValue_6 (19)  [1/1] 0.00ns
+newFuncRoot:1  call void (...)* @_ssdm_op_SpecInterface(i1* %in_V_dest_V, i1* %in_V_id_V, i1* %in_V_last_V, i1* %in_V_user_V, i4* %in_V_strb_V, i4* %in_V_keep_V, i32* %in_V_data_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436)
 
- <State 3> : 0.00ns
-ST_3 : Operation 22 [1/2] (0.00ns)   --->   "call fastcc void @mem_read(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)" [mem.cpp:67]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "br label %._crit_edge" [mem.cpp:67]
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br label %.ret.exitStub"
+ST_1: StgValue_7 (20)  [1/1] 0.00ns
+newFuncRoot:2  call void (...)* @_ssdm_op_SpecInterface(i1* %out_V_dest_V, i1* %out_V_id_V, i1* %out_V_last_V, i1* %out_V_user_V, i4* %out_V_strb_V, i4* %out_V_keep_V, i32* %out_V_data_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436)
 
- <State 4> : 0.00ns
-ST_4 : Operation 25 [1/1] (0.00ns)   --->   "ret void"
+ST_1: mask_read (21)  [1/1] 0.00ns
+newFuncRoot:3  %mask_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %mask)
+
+ST_1: rw_read (22)  [1/1] 0.00ns
+newFuncRoot:4  %rw_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %rw)
+
+ST_1: tmp (23)  [1/1] 0.00ns  loc: mem.cpp:60
+newFuncRoot:5  %tmp = trunc i32 %rw_read to i2
+
+ST_1: tmp_8 (24)  [1/1] 2.07ns  loc: mem.cpp:60
+newFuncRoot:6  %tmp_8 = icmp eq i2 %tmp, 0
+
+ST_1: StgValue_12 (25)  [1/1] 0.00ns  loc: mem.cpp:60
+newFuncRoot:7  br i1 %tmp_8, label %0, label %1
+
+ST_1: StgValue_13 (27)  [2/2] 1.77ns  loc: mem.cpp:63
+:0  call fastcc void @mem_read(i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)
+
+ST_1: StgValue_14 (28)  [2/2] 0.00ns  loc: mem.cpp:64
+:1  call fastcc void @mem_write(i32* %out_V_data_V, i4* %out_V_keep_V, i4* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %mask_read, [8 x i32]* %test_init_arr_V)
+
+ST_1: tmp_1 (31)  [1/1] 0.00ns  loc: mem.cpp:66
+:0  %tmp_1 = trunc i32 %rw_read to i1
+
+ST_1: StgValue_16 (32)  [1/1] 0.00ns  loc: mem.cpp:66
+:1  br i1 %tmp_1, label %2, label %._crit_edge
+
+ST_1: StgValue_17 (34)  [2/2] 1.77ns  loc: mem.cpp:67
+:0  call fastcc void @mem_read(i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)
+
+
+ <State 2>: 0.00ns
+ST_2: StgValue_18 (27)  [1/2] 0.00ns  loc: mem.cpp:63
+:0  call fastcc void @mem_read(i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)
+
+ST_2: StgValue_19 (28)  [1/2] 0.00ns  loc: mem.cpp:64
+:1  call fastcc void @mem_write(i32* %out_V_data_V, i4* %out_V_keep_V, i4* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %mask_read, [8 x i32]* %test_init_arr_V)
+
+ST_2: StgValue_20 (29)  [1/1] 0.00ns  loc: mem.cpp:65
+:2  br label %.ret.exitStub
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_21 (34)  [1/2] 0.00ns  loc: mem.cpp:67
+:0  call fastcc void @mem_read(i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V)
+
+ST_3: StgValue_22 (35)  [1/1] 0.00ns  loc: mem.cpp:67
+:1  br label %._crit_edge
+
+ST_3: StgValue_23 (37)  [1/1] 0.00ns
+._crit_edge:0  br label %.ret.exitStub
+
+
+ <State 4>: 0.00ns
+ST_4: StgValue_24 (39)  [1/1] 0.00ns
+.ret.exitStub:0  ret void
+
 
 
 ============================================================
@@ -116,9 +154,10 @@ ST_4 : Operation 25 [1/1] (0.00ns)   --->   "ret void"
 ============================================================
 Target clock period: 800ns, clock uncertainty: 100ns.
 
- <State 1>: 1.77ns
+ <State 1>: 2.07ns
 The critical path consists of the following:
-	'call' operation (mem.cpp:63) to 'mem_read' [27]  (1.77 ns)
+	wire read on port 'rw' [22]  (0 ns)
+	'icmp' operation ('tmp_8', mem.cpp:60) [24]  (2.07 ns)
 
  <State 2>: 0ns
 The critical path consists of the following:

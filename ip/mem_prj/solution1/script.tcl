@@ -8,10 +8,10 @@ set_top mem_hw
 add_files mem.cpp
 add_files -tb mem_test.cpp
 open_solution "solution1"
-set_part {xc7z020clg484-1}
+set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 800 -name default
 #source "./mem_prj/solution1/directives.tcl"
-csim_design -compiler gcc
+csim_design -clean -compiler gcc
 csynth_design
-cosim_design -reduce_diskspace -compiler gcc
-export_design -rtl verilog -format ip_catalog
+cosim_design
+export_design -format ip_catalog

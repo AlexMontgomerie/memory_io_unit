@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>f_PL_250_BURST_256_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_Jun-08_16-38/PS_Trace_Jun-08_16-38/PS_Trace_Jun-08_16-38_</name>
+			<type>1</type>
+			<location>/home/juju/mem_io_unit_testing/sw/sdk/f_PL_250_BURST_256_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>

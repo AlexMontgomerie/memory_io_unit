@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c ../../mem.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/juju/mem_test_rw_seperate/ip/mem_prj/solution1/solution1.directive}
+set DirectiveFile {/home/juju/mem_io_unit_testing/ip/mem_prj/solution1/solution1.directive}
 set TBFiles {verilog ../../mem_test.cpp bc ../../mem_test.cpp vhdl ../../mem_test.cpp sc ../../mem_test.cpp cas ../../mem_test.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

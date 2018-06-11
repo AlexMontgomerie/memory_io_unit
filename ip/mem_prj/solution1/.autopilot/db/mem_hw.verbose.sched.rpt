@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'mem_hw'
 ================================================================
-* Date:           Mon Jun  4 11:41:29 2018
+* Date:           Mon Jun 11 14:12:33 2018
 
-* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
 * Project:        mem_prj
 * Solution:       solution1
 * Product family: zynq
@@ -20,17 +20,17 @@
     +--------+--------+----------+------------+
     |  Clock | Target | Estimated| Uncertainty|
     +--------+--------+----------+------------+
-    |ap_clk  |  800.00|      8.00|      100.00|
+    |ap_clk  |  800.00|     10.88|      100.00|
     +--------+--------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+---------+-----+---------+----------+
-    |    Latency    |    Interval   | Pipeline |
-    | min |   max   | min |   max   |   Type   |
-    +-----+---------+-----+---------+----------+
-    |    2|  1048325|    3|  1048326| dataflow |
-    +-----+---------+-----+---------+----------+
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|   21|    3|   22| dataflow |
+    +-----+-----+-----+-----+----------+
 
     + Detail: 
         * Instance: 
@@ -65,8 +65,8 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 4
-* Pipeline : 0
+* Number of FSM states: 4
+* Pipeline: 0
 * Dataflow Pipeline: 1
   DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
 
@@ -78,48 +78,111 @@ IsGatedGlobalClock: 0
 3 --> 
 	4  / true
 4 --> 
-
 * FSM state operations: 
 
- <State 1> : 0.00ns
+ <State 1>: 0.00ns
 
- <State 2> : 1.96ns
-ST_2 : Operation 5 [1/1] (1.00ns)   --->   "%mask_read = call i64 @_ssdm_op_Read.s_axilite.i64(i64 %mask)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 6 [1/1] (1.00ns)   --->   "%rw_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %rw)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 7 [2/2] (0.95ns)   --->   "call fastcc void @Block__proc(i32 %rw_read, i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V, i64 %mask_read, i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, [256 x i64]* %test_init_arr_V)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ <State 2>: 3.07ns
+ST_2: mask_read (45)  [1/1] 1.00ns
+codeRepl:27  %mask_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %mask)
 
- <State 3> : 0.00ns
-ST_3 : Operation 8 [1/2] (0.00ns)   --->   "call fastcc void @Block__proc(i32 %rw_read, i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V, i64 %mask_read, i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, [256 x i64]* %test_init_arr_V)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2: rw_read (46)  [1/1] 1.00ns
+codeRepl:28  %rw_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %rw)
 
- <State 4> : 0.00ns
-ST_4 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str2) nounwind" [mem.cpp:62]
-ST_4 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %out_V_data_V), !map !71"
-ST_4 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_V_keep_V), !map !75"
-ST_4 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %out_V_strb_V), !map !79"
-ST_4 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_user_V), !map !83"
-ST_4 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_last_V), !map !87"
-ST_4 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_id_V), !map !91"
-ST_4 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_dest_V), !map !95"
-ST_4 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_V_data_V), !map !99"
-ST_4 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_V_keep_V), !map !103"
-ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %in_V_strb_V), !map !107"
-ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_user_V), !map !111"
-ST_4 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_last_V), !map !115"
-ST_4 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_id_V), !map !119"
-ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_dest_V), !map !123"
-ST_4 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %rw), !map !127"
-ST_4 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %mask), !map !133"
-ST_4 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([256 x i64]* %test_init_arr_V), !map !137"
-ST_4 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @mem_hw_str) nounwind"
-ST_4 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str2) nounwind" [mem.cpp:52]
-ST_4 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [12 x i8]* @p_str6, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [mem.cpp:53]
-ST_4 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64 %mask, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [12 x i8]* @p_str6, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [mem.cpp:54]
-ST_4 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %rw, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [12 x i8]* @p_str6, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [mem.cpp:55]
-ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecMemCore([256 x i64]* %test_init_arr_V, [1 x i8]* @p_str3, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str3, i32 -1, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3)"
-ST_4 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([256 x i64]* %test_init_arr_V, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [12 x i8]* @p_str6, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind"
-ST_4 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %out_V_data_V, i8* %out_V_keep_V, i8* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [mem.cpp:57]
-ST_4 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_V_data_V, i8* %in_V_keep_V, i8* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [mem.cpp:58]
-ST_4 : Operation 36 [1/1] (0.00ns)   --->   "ret void" [mem.cpp:71]
+ST_2: StgValue_7 (47)  [2/2] 2.07ns
+codeRepl:29  call fastcc void @Block__proc(i32 %rw_read, i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V, i32* %out_V_data_V, i4* %out_V_keep_V, i4* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %mask_read, [8 x i32]* %test_init_arr_V)
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_8 (47)  [1/2] 0.00ns
+codeRepl:29  call fastcc void @Block__proc(i32 %rw_read, i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V, i32* %out_V_data_V, i4* %out_V_keep_V, i4* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, i32 %mask_read, [8 x i32]* %test_init_arr_V)
+
+
+ <State 4>: 0.00ns
+ST_4: StgValue_9 (18)  [1/1] 0.00ns  loc: mem.cpp:62
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_10 (19)  [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_V_data_V), !map !114
+
+ST_4: StgValue_11 (20)  [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_V_keep_V), !map !118
+
+ST_4: StgValue_12 (21)  [1/1] 0.00ns
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_V_strb_V), !map !122
+
+ST_4: StgValue_13 (22)  [1/1] 0.00ns
+codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_user_V), !map !126
+
+ST_4: StgValue_14 (23)  [1/1] 0.00ns
+codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_last_V), !map !130
+
+ST_4: StgValue_15 (24)  [1/1] 0.00ns
+codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_id_V), !map !134
+
+ST_4: StgValue_16 (25)  [1/1] 0.00ns
+codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_V_dest_V), !map !138
+
+ST_4: StgValue_17 (26)  [1/1] 0.00ns
+codeRepl:8  call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_V_data_V), !map !142
+
+ST_4: StgValue_18 (27)  [1/1] 0.00ns
+codeRepl:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_V_keep_V), !map !146
+
+ST_4: StgValue_19 (28)  [1/1] 0.00ns
+codeRepl:10  call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_V_strb_V), !map !150
+
+ST_4: StgValue_20 (29)  [1/1] 0.00ns
+codeRepl:11  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_user_V), !map !154
+
+ST_4: StgValue_21 (30)  [1/1] 0.00ns
+codeRepl:12  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_last_V), !map !158
+
+ST_4: StgValue_22 (31)  [1/1] 0.00ns
+codeRepl:13  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_id_V), !map !162
+
+ST_4: StgValue_23 (32)  [1/1] 0.00ns
+codeRepl:14  call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_V_dest_V), !map !166
+
+ST_4: StgValue_24 (33)  [1/1] 0.00ns
+codeRepl:15  call void (...)* @_ssdm_op_SpecBitsMap(i32 %rw), !map !170
+
+ST_4: StgValue_25 (34)  [1/1] 0.00ns
+codeRepl:16  call void (...)* @_ssdm_op_SpecBitsMap(i32 %mask), !map !176
+
+ST_4: StgValue_26 (35)  [1/1] 0.00ns
+codeRepl:17  call void (...)* @_ssdm_op_SpecBitsMap([8 x i32]* %test_init_arr_V), !map !180
+
+ST_4: StgValue_27 (36)  [1/1] 0.00ns
+codeRepl:18  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @mem_hw_str) nounwind
+
+ST_4: StgValue_28 (37)  [1/1] 0.00ns  loc: mem.cpp:52
+codeRepl:19  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_29 (38)  [1/1] 0.00ns  loc: mem.cpp:53
+codeRepl:20  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str10439, i32 0, i32 0, [1 x i8]* @p_str10436, i32 0, i32 0, [12 x i8]* @p_str10440, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_30 (39)  [1/1] 0.00ns  loc: mem.cpp:54
+codeRepl:21  call void (...)* @_ssdm_op_SpecInterface(i32 %mask, [10 x i8]* @p_str10439, i32 0, i32 0, [1 x i8]* @p_str10436, i32 0, i32 0, [12 x i8]* @p_str10440, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_31 (40)  [1/1] 0.00ns  loc: mem.cpp:55
+codeRepl:22  call void (...)* @_ssdm_op_SpecInterface(i32 %rw, [10 x i8]* @p_str10439, i32 0, i32 0, [1 x i8]* @p_str10436, i32 0, i32 0, [12 x i8]* @p_str10440, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+
+ST_4: empty (41)  [1/1] 0.00ns
+codeRepl:23  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([8 x i32]* %test_init_arr_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_4: StgValue_33 (42)  [1/1] 0.00ns
+codeRepl:24  call void (...)* @_ssdm_op_SpecInterface([8 x i32]* %test_init_arr_V, [10 x i8]* @p_str10439, i32 0, i32 0, [1 x i8]* @p_str10436, i32 0, i32 0, [12 x i8]* @p_str10440, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_34 (43)  [1/1] 0.00ns  loc: mem.cpp:57
+codeRepl:25  call void (...)* @_ssdm_op_SpecInterface(i32* %out_V_data_V, i4* %out_V_keep_V, i4* %out_V_strb_V, i1* %out_V_user_V, i1* %out_V_last_V, i1* %out_V_id_V, i1* %out_V_dest_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_35 (44)  [1/1] 0.00ns  loc: mem.cpp:58
+codeRepl:26  call void (...)* @_ssdm_op_SpecInterface(i32* %in_V_data_V, i4* %in_V_keep_V, i4* %in_V_strb_V, i1* %in_V_user_V, i1* %in_V_last_V, i1* %in_V_id_V, i1* %in_V_dest_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
+
+ST_4: StgValue_36 (48)  [1/1] 0.00ns  loc: mem.cpp:71
+codeRepl:30  ret void
+
 
 
 ============================================================
@@ -130,10 +193,10 @@ Target clock period: 800ns, clock uncertainty: 100ns.
  <State 1>: 0ns
 The critical path consists of the following:
 
- <State 2>: 1.96ns
+ <State 2>: 3.07ns
 The critical path consists of the following:
 	s_axi read on port 'mask' [45]  (1 ns)
-	'call' operation to 'Block__proc' [47]  (0.959 ns)
+	'call' operation to 'Block__proc' [47]  (2.07 ns)
 
  <State 3>: 0ns
 The critical path consists of the following:

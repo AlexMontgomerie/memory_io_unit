@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
--- Date        : Tue Jun  5 18:09:01 2018
+-- Date        : Tue Jun  5 18:08:56 2018
 -- Host        : ee-boxer0 running 64-bit CentOS release 6.9 (Final)
--- Command     : write_vhdl -force -mode synth_stub
---               /home/am9215/memory_io_unit/mem_io_unit_testing.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_pc_4 -prefix
+--               design_1_auto_pc_4_ design_1_auto_pc_4_stub.vhdl
 -- Design      : design_1_auto_pc_4
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

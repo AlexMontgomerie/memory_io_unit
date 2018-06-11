@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mem_read'" level="0">
-<item name = "Date">Mon Jun  4 11:41:29 2018
+<item name = "Date">Mon Jun 11 14:12:33 2018
 </item>
-<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Version">2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)</item>
 <item name = "Project">mem_prj</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -104,12 +104,12 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, mem_read, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, mem_read, return value</column>
-<column name="in_r_TDATA">in, 64, axis, in_stream_V_data_V, pointer</column>
+<column name="in_r_TDATA">in, 32, axis, in_stream_V_data_V, pointer</column>
 <column name="in_r_TVALID">in, 1, axis, in_stream_V_data_V, pointer</column>
 <column name="in_r_TREADY">out, 1, axis, in_stream_V_dest_V, pointer</column>
 <column name="in_r_TDEST">in, 1, axis, in_stream_V_dest_V, pointer</column>
-<column name="in_r_TKEEP">in, 8, axis, in_stream_V_keep_V, pointer</column>
-<column name="in_r_TSTRB">in, 8, axis, in_stream_V_strb_V, pointer</column>
+<column name="in_r_TKEEP">in, 4, axis, in_stream_V_keep_V, pointer</column>
+<column name="in_r_TSTRB">in, 4, axis, in_stream_V_strb_V, pointer</column>
 <column name="in_r_TUSER">in, 1, axis, in_stream_V_user_V, pointer</column>
 <column name="in_r_TLAST">in, 1, axis, in_stream_V_last_V, pointer</column>
 <column name="in_r_TID">in, 1, axis, in_stream_V_id_V, pointer</column>

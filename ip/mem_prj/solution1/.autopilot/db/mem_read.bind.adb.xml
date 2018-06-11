@@ -37,9 +37,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0">
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="0" op_22_bw="0">
 <![CDATA[
-.critedge:0  call void (...)* @_ssdm_op_SpecInterface(i64* %in_stream_V_data_V, i8* %in_stream_V_keep_V, i8* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+.critedge:0  call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -72,7 +72,7 @@
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-._crit_edge:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str) nounwind
+._crit_edge:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str10435) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -87,7 +87,7 @@
 
 <Node id="12" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-._crit_edge:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str)
+._crit_edge:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str10435)
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -102,7 +102,7 @@
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-._crit_edge:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+._crit_edge:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str10436) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -117,7 +117,7 @@
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="0">
 <![CDATA[
-._crit_edge:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str2) nounwind
+._crit_edge:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str10436) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -130,9 +130,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="84" op_0_bw="84" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1">
+<Node id="15" bw="44" op_0_bw="44" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1">
 <![CDATA[
-._crit_edge:4  %empty = call { i64, i8, i8, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i64P.i8P.i8P.i1P.i1P.i1P.i1P(i64* %in_stream_V_data_V, i8* %in_stream_V_keep_V, i8* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V)
+._crit_edge:4  %empty = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V)
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -145,9 +145,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="1" op_0_bw="84">
+<Node id="16" bw="1" op_0_bw="44">
 <![CDATA[
-._crit_edge:5  %tmp_last_V = extractvalue { i64, i8, i8, i1, i1, i1, i1 } %empty, 4
+._crit_edge:5  %tmp_last_V = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty, 4
 
 ]]></Node>
 <StgValue><ssdm name="tmp_last_V"/></StgValue>
@@ -162,7 +162,7 @@
 
 <Node id="17" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-._crit_edge:6  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str, i32 %tmp)
+._crit_edge:6  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str10435, i32 %tmp)
 
 ]]></Node>
 <StgValue><ssdm name="empty_3"/></StgValue>
@@ -246,23 +246,23 @@
 </dataflow>
 <dataflow id="36" from="in_stream_V_dest_V" to="StgValue_4" fromId="27" toId="4">
 </dataflow>
-<dataflow id="38" from="p_str7" to="StgValue_4" fromId="37" toId="4">
+<dataflow id="38" from="p_str10441" to="StgValue_4" fromId="37" toId="4">
 </dataflow>
 <dataflow id="40" from="StgValue_39" to="StgValue_4" fromId="39" toId="4">
 </dataflow>
 <dataflow id="41" from="StgValue_39" to="StgValue_4" fromId="39" toId="4">
 </dataflow>
-<dataflow id="43" from="p_str8" to="StgValue_4" fromId="42" toId="4">
+<dataflow id="43" from="p_str10442" to="StgValue_4" fromId="42" toId="4">
 </dataflow>
 <dataflow id="45" from="StgValue_44" to="StgValue_4" fromId="44" toId="4">
 </dataflow>
 <dataflow id="46" from="StgValue_44" to="StgValue_4" fromId="44" toId="4">
 </dataflow>
-<dataflow id="48" from="p_str2" to="StgValue_4" fromId="47" toId="4">
+<dataflow id="48" from="p_str10436" to="StgValue_4" fromId="47" toId="4">
 </dataflow>
-<dataflow id="49" from="p_str2" to="StgValue_4" fromId="47" toId="4">
+<dataflow id="49" from="p_str10436" to="StgValue_4" fromId="47" toId="4">
 </dataflow>
-<dataflow id="50" from="p_str2" to="StgValue_4" fromId="47" toId="4">
+<dataflow id="50" from="p_str10436" to="StgValue_4" fromId="47" toId="4">
 </dataflow>
 <dataflow id="51" from="StgValue_44" to="StgValue_4" fromId="44" toId="4">
 </dataflow>
@@ -272,17 +272,17 @@
 </dataflow>
 <dataflow id="54" from="StgValue_44" to="StgValue_4" fromId="44" toId="4">
 </dataflow>
-<dataflow id="55" from="p_str2" to="StgValue_4" fromId="47" toId="4">
+<dataflow id="55" from="p_str10436" to="StgValue_4" fromId="47" toId="4">
 </dataflow>
-<dataflow id="56" from="p_str2" to="StgValue_4" fromId="47" toId="4">
+<dataflow id="56" from="p_str10436" to="StgValue_4" fromId="47" toId="4">
 </dataflow>
 <dataflow id="58" from="_ssdm_op_SpecLoopName" to="StgValue_6" fromId="57" toId="6">
 </dataflow>
-<dataflow id="60" from="p_str" to="StgValue_6" fromId="59" toId="6">
+<dataflow id="60" from="p_str10435" to="StgValue_6" fromId="59" toId="6">
 </dataflow>
 <dataflow id="62" from="_ssdm_op_SpecRegionBegin" to="tmp" fromId="61" toId="7">
 </dataflow>
-<dataflow id="63" from="p_str" to="tmp" fromId="59" toId="7">
+<dataflow id="63" from="p_str10435" to="tmp" fromId="59" toId="7">
 </dataflow>
 <dataflow id="65" from="_ssdm_op_SpecPipeline" to="StgValue_8" fromId="64" toId="8">
 </dataflow>
@@ -294,7 +294,7 @@
 </dataflow>
 <dataflow id="69" from="StgValue_44" to="StgValue_8" fromId="44" toId="8">
 </dataflow>
-<dataflow id="70" from="p_str2" to="StgValue_8" fromId="47" toId="8">
+<dataflow id="70" from="p_str10436" to="StgValue_8" fromId="47" toId="8">
 </dataflow>
 <dataflow id="72" from="_ssdm_op_SpecLoopTripCount" to="StgValue_9" fromId="71" toId="9">
 </dataflow>
@@ -304,9 +304,9 @@
 </dataflow>
 <dataflow id="75" from="StgValue_44" to="StgValue_9" fromId="44" toId="9">
 </dataflow>
-<dataflow id="76" from="p_str2" to="StgValue_9" fromId="47" toId="9">
+<dataflow id="76" from="p_str10436" to="StgValue_9" fromId="47" toId="9">
 </dataflow>
-<dataflow id="78" from="_ssdm_op_Read.axis.volatile.i64P.i8P.i8P.i1P.i1P.i1P.i1P" to="empty" fromId="77" toId="10">
+<dataflow id="78" from="_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P" to="empty" fromId="77" toId="10">
 </dataflow>
 <dataflow id="79" from="in_stream_V_data_V" to="empty" fromId="21" toId="10">
 </dataflow>
@@ -326,7 +326,7 @@
 </dataflow>
 <dataflow id="88" from="_ssdm_op_SpecRegionEnd" to="empty_3" fromId="87" toId="12">
 </dataflow>
-<dataflow id="89" from="p_str" to="empty_3" fromId="59" toId="12">
+<dataflow id="89" from="p_str10435" to="empty_3" fromId="59" toId="12">
 </dataflow>
 <dataflow id="90" from="tmp" to="empty_3" fromId="7" toId="12">
 </dataflow>

@@ -3,9 +3,9 @@
 ================================================================
 == Vivado HLS Report for 'mem_read'
 ================================================================
-* Date:           Mon Jun  4 11:41:29 2018
+* Date:           Mon Jun 11 14:12:32 2018
 
-* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Version:        2017.1 (Build 1846317 on Fri Apr 14 19:19:38 MDT 2017)
 * Project:        mem_prj
 * Solution:       solution1
 * Product family: zynq
@@ -73,9 +73,9 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 3
-* Pipeline : 1
-  Pipeline-0 : II = 1, D = 1, States = { 2 }
+* Number of FSM states: 3
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 1, States = { 2 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
@@ -85,25 +85,46 @@ IsGatedGlobalClock: 0
 	3  / (tmp_last_V)
 	2  / (!tmp_last_V)
 3 --> 
-
 * FSM state operations: 
 
- <State 1> : 0.00ns
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64* %in_stream_V_data_V, i8* %in_stream_V_keep_V, i8* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind"
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "br label %._crit_edge"
+ <State 1>: 0.00ns
+ST_1: StgValue_4 (8)  [1/1] 0.00ns
+.critedge:0  call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V, [5 x i8]* @p_str10441, i32 1, i32 1, [5 x i8]* @p_str10442, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str10436, [1 x i8]* @p_str10436) nounwind
 
- <State 2> : 0.00ns
-ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str) nounwind" [mem.cpp:9]
-ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str)" [mem.cpp:9]
-ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [mem.cpp:10]
-ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str2) nounwind" [mem.cpp:11]
-ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%empty = call { i64, i8, i8, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i64P.i8P.i8P.i1P.i1P.i1P.i1P(i64* %in_stream_V_data_V, i8* %in_stream_V_keep_V, i8* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V)" [mem.cpp:12]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
-ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_last_V = extractvalue { i64, i8, i8, i1, i1, i1, i1 } %empty, 4" [mem.cpp:12]
-ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str, i32 %tmp)" [mem.cpp:14]
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %tmp_last_V, label %0, label %._crit_edge" [mem.cpp:9]
+ST_1: StgValue_5 (9)  [1/1] 0.00ns
+.critedge:1  br label %._crit_edge
 
- <State 3> : 0.00ns
-ST_3 : Operation 14 [1/1] (0.00ns)   --->   "ret void" [mem.cpp:15]
+
+ <State 2>: 0.00ns
+ST_2: StgValue_6 (11)  [1/1] 0.00ns  loc: mem.cpp:9
+._crit_edge:0  call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str10435) nounwind
+
+ST_2: tmp (12)  [1/1] 0.00ns  loc: mem.cpp:9
+._crit_edge:1  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str10435)
+
+ST_2: StgValue_8 (13)  [1/1] 0.00ns  loc: mem.cpp:10
+._crit_edge:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str10436) nounwind
+
+ST_2: StgValue_9 (14)  [1/1] 0.00ns  loc: mem.cpp:11
+._crit_edge:3  call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 0, i32 0, [1 x i8]* @p_str10436) nounwind
+
+ST_2: empty (15)  [1/1] 0.00ns  loc: mem.cpp:12
+._crit_edge:4  %empty = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %in_stream_V_data_V, i4* %in_stream_V_keep_V, i4* %in_stream_V_strb_V, i1* %in_stream_V_user_V, i1* %in_stream_V_last_V, i1* %in_stream_V_id_V, i1* %in_stream_V_dest_V)
+
+ST_2: tmp_last_V (16)  [1/1] 0.00ns  loc: mem.cpp:12
+._crit_edge:5  %tmp_last_V = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty, 4
+
+ST_2: empty_3 (17)  [1/1] 0.00ns  loc: mem.cpp:14
+._crit_edge:6  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str10435, i32 %tmp)
+
+ST_2: StgValue_13 (18)  [1/1] 0.00ns  loc: mem.cpp:9
+._crit_edge:7  br i1 %tmp_last_V, label %0, label %._crit_edge
+
+
+ <State 3>: 0.00ns
+ST_3: StgValue_14 (20)  [1/1] 0.00ns  loc: mem.cpp:15
+:0  ret void
+
 
 
 ============================================================
